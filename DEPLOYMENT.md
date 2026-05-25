@@ -1,16 +1,18 @@
 # GitHub Pages And GoDaddy Domain Setup
 
-This portfolio is a static React app deployed with GitHub Pages.
+This portfolio is a static React app deployed with GitHub Pages from the `docs` folder.
 
 ## GitHub Setup
 
 1. Push this repo to GitHub.
 2. In the repo, go to Settings -> Pages.
-3. Set Build and deployment source to GitHub Actions.
-4. Set the custom domain to `santiagopirezvelasco.com`.
-5. Enable HTTPS after GitHub finishes checking DNS.
+3. Set Build and deployment source to Deploy from a branch.
+4. Set the branch to `main` and the folder to `/docs`.
+5. Set the custom domain to `santiagopirezvelasco.com`.
+6. Enable HTTPS after GitHub finishes checking DNS.
 
-The workflow in `.github/workflows/deploy.yml` builds the site with `npm run build` and publishes `dist`.
+The source code lives in `src`. The production site files live in `docs`.
+After changes, run `npm run build` and copy the new `dist` output into `docs` before committing.
 
 ## GoDaddy DNS
 
