@@ -429,7 +429,7 @@ const navItems = [
 
 function useReveal() {
   useEffect(() => {
-    const elements = Array.from(document.querySelectorAll("[data-reveal]"));
+    const observed = new Set();
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -441,8 +441,37 @@ function useReveal() {
       { threshold: 0.15 }
     );
 
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    const observeRevealElements = (root = document) => {
+      const elements = root instanceof Element && root.matches("[data-reveal]")
+        ? [root, ...root.querySelectorAll("[data-reveal]")]
+        : Array.from(root.querySelectorAll("[data-reveal]"));
+
+      elements.forEach((element) => {
+        if (!observed.has(element)) {
+          observed.add(element);
+          observer.observe(element);
+        }
+      });
+    };
+
+    observeRevealElements();
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node instanceof Element) {
+            observeRevealElements(node);
+          }
+        });
+      });
+    });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutationObserver.disconnect();
+      observer.disconnect();
+    };
   }, []);
 }
 
