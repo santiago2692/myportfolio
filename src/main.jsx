@@ -23,7 +23,7 @@ const profile = {
   name: "Santiago Pirez Velasco",
   title: "Senior Director E2E Product Experiences & Design for North America Mobility",
   location: "United States",
-  email: "hello@santiagopirezvelasco.com",
+  email: "santiagopirezvelasco@gmail.com",
   linkedin: "https://www.linkedin.com/in/santiago-pirez-22980b7a/",
   site: "https://www.santiagopirezvelasco.com/",
   intro:
@@ -1003,24 +1003,57 @@ function ContactModal({ close }) {
     subject: "Portfolio inquiry",
     message: ""
   });
+  const [status, setStatus] = useState("idle");
+  const [statusMessage, setStatusMessage] = useState("");
 
   const update = (event) => {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
+    if (status !== "idle") {
+      setStatus("idle");
+      setStatusMessage("");
+    }
   };
 
-  const sendEmail = (event) => {
+  const sendEmail = async (event) => {
     event.preventDefault();
-    const body = [
-      form.message,
-      "",
-      `From: ${form.name || "Not provided"}`,
-      `Reply to: ${form.email || "Not provided"}`
-    ].join("\n");
-    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-      form.subject || "Portfolio inquiry"
-    )}&body=${encodeURIComponent(body)}`;
-    close();
+    setStatus("sending");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${profile.email}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          name: form.name || "Not provided",
+          email: form.email || "Not provided",
+          subject: form.subject || "Portfolio inquiry",
+          message: form.message,
+          _subject: form.subject || "Portfolio inquiry from santiagopirezvelasco.com",
+          _template: "table",
+          _captcha: "false"
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("The message could not be sent.");
+      }
+
+      setStatus("sent");
+      setStatusMessage("Message sent. Thank you for reaching out.");
+      setForm({
+        name: "",
+        email: "",
+        subject: "Portfolio inquiry",
+        message: ""
+      });
+    } catch (error) {
+      setStatus("error");
+      setStatusMessage("Something went wrong. Please email Santiago directly at santiagopirezvelasco@gmail.com.");
+    }
   };
 
   return (
@@ -1032,8 +1065,8 @@ function ContactModal({ close }) {
         <p className="section-label">Let's talk</p>
         <h2 id="contact-title">Send Santiago an email.</h2>
         <p>
-          Share the project, role, prototype, or small idea. This opens your email app with
-          everything prefilled.
+          Share the project, role, prototype, or small idea. This sends a message straight
+          to Santiago's inbox.
         </p>
         <form onSubmit={sendEmail}>
           <label>
@@ -1042,7 +1075,7 @@ function ContactModal({ close }) {
           </label>
           <label>
             <span>Email</span>
-            <input name="email" type="email" value={form.email} onChange={update} autoComplete="email" />
+            <input name="email" type="email" value={form.email} onChange={update} autoComplete="email" required />
           </label>
           <label>
             <span>Subject</span>
@@ -1052,9 +1085,14 @@ function ContactModal({ close }) {
             <span>Message</span>
             <textarea name="message" value={form.message} onChange={update} rows="5" required />
           </label>
-          <button className="pill-button light" type="submit">
+          {statusMessage ? (
+            <p className={`contact-status is-${status}`} role="status" aria-live="polite">
+              {statusMessage}
+            </p>
+          ) : null}
+          <button className="pill-button light" type="submit" disabled={status === "sending"}>
             <Mail size={18} />
-            <span>Open email draft</span>
+            <span>{status === "sending" ? "Sending..." : "Send message"}</span>
           </button>
         </form>
       </div>

@@ -202,6 +202,12 @@ button {
   transform: translateY(-2px);
 }
 
+.pill-button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
 .pill-button.light {
   background: var(--text);
   color: #09090b;
@@ -1701,6 +1707,29 @@ button {
 .contact-modal input:focus,
 .contact-modal textarea:focus {
   border-color: rgba(255, 255, 255, 0.32);
+}
+
+.contact-status {
+  margin: 2px 0 0;
+  padding: 11px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contact-status.is-sent {
+  border-color: rgba(134, 239, 172, 0.3);
+  background: rgba(34, 197, 94, 0.1);
+  color: #bbf7d0;
+}
+
+.contact-status.is-error {
+  border-color: rgba(248, 113, 113, 0.32);
+  background: rgba(239, 68, 68, 0.1);
+  color: #fecaca;
 }
 
 .site-footer {
