@@ -70,7 +70,7 @@ const projects = [
     category: "Built with Codex",
     accent: "emerald",
     platform: ["Mobile", "Shared agenda", "Google Play"],
-    projectUrl: "https://tigermindlabs.com/",
+    projectUrl: "https://tigermindlabs.com/milo/",
     summary:
       "A shared agenda product for couples, families, and small groups that need a calmer way to coordinate what is happening today.",
     role: "Product designer and solo builder",
@@ -191,7 +191,7 @@ const projects = [
     category: "Tiger Mind Labs",
     accent: "lime",
     platform: ["Mobile app", "Game scoring", "App Store"],
-    projectUrl: "https://hackersgolf.app/",
+    projectUrl: "https://tigermindlabs.com/hackers-golf/",
     summary:
       "A playful golf app that makes rounds more social through game packs, scoring, leaderboards, and cart-mode rules.",
     role: "Product designer, co-builder",
@@ -221,7 +221,7 @@ const projects = [
     category: "Tiger Mind Labs",
     accent: "blue",
     platform: ["Mobile app", "Running", "App Store"],
-    projectUrl: "https://pacechase.com/",
+    projectUrl: "https://tigermindlabs.com/pacechase/",
     summary:
       "A pace-tracking and planning app for runners and athletes who need fast splits, finish predictions, and race-day confidence.",
     role: "Product designer, co-builder",
@@ -251,7 +251,7 @@ const projects = [
     category: "Tiger Mind Labs",
     accent: "amber",
     platform: ["Web", "Mobile prototype"],
-    projectUrl: "https://cityscout.fun/",
+    projectUrl: "https://tigermindlabs.com/cityscout/",
     summary:
       "A local discovery concept for finding food, drinks, and entertainment through curated, accessible neighborhood information.",
     role: "Product designer",
@@ -311,7 +311,7 @@ const projects = [
     category: "Built with Codex",
     accent: "red",
     platform: ["Web app", "Workout builder"],
-    projectUrl: "https://tigermindlabs.com/",
+    projectUrl: "https://tigermindlabs.com/boxfox/",
     summary:
       "A training and workout-building product experiment focused on fast programming, clear rounds, and useful workout previews.",
     role: "Solo builder",
@@ -334,6 +334,209 @@ const projects = [
     metrics: ["Workout builder", "AMRAP", "Codex build"]
   }
 ];
+
+const projectDetailVisuals = {
+  tml: [
+    {
+      title: "Studio map",
+      caption: "A home base that connects product experiments, founder story, and live launches.",
+      meta: "Brand system",
+      type: "studio"
+    },
+    {
+      title: "Product worlds",
+      caption: "Each app gets a quick path into the product instead of hiding inside a portfolio grid.",
+      meta: "Launch paths",
+      type: "dashboard"
+    },
+    {
+      title: "Iteration loop",
+      caption: "A structure that makes it easy to add the next Codex-built experiment.",
+      meta: "Scalable content",
+      type: "system"
+    }
+  ],
+  milo: [
+    {
+      title: "Today view",
+      caption: "A calm shared agenda for people who need to know what is happening now.",
+      meta: "Shared planning",
+      type: "agenda"
+    },
+    {
+      title: "Quick handoff",
+      caption: "Lightweight context, status, and edits without heavy calendar mechanics.",
+      meta: "Family flow",
+      type: "mobile"
+    },
+    {
+      title: "Less coordination drag",
+      caption: "Built around the daily question: what do we need to remember together?",
+      meta: "Customer problem",
+      type: "system"
+    }
+  ],
+  "statements-transactions-payments": [
+    {
+      title: "Unified money view",
+      caption: "Fragmented statements, transactions, and payments brought into one clearer system.",
+      meta: "Finance UX",
+      type: "finance"
+    },
+    {
+      title: "Support pressure",
+      caption: "Focused on the workflows that created repeated confusion and service volume.",
+      meta: "Risk map",
+      type: "dashboard"
+    },
+    {
+      title: "Prototype alignment",
+      caption: "A future-state flow that let teams test, train, and align around the same model.",
+      meta: "Text-to-code",
+      type: "system"
+    }
+  ],
+  wexpert: [
+    {
+      title: "Business discovery",
+      caption: "A conversational path for small businesses that did not know where to start.",
+      meta: "AI guide",
+      type: "chat"
+    },
+    {
+      title: "Recommendation logic",
+      caption: "Needs-based prompts turned rigid product selection into a guided dialogue.",
+      meta: "Personalization",
+      type: "dashboard"
+    },
+    {
+      title: "Ecosystem answer",
+      caption: "The solution reframed WEX as a connected set of services, not disconnected forms.",
+      meta: "Concept test",
+      type: "system"
+    }
+  ],
+  "purchase-controls": [
+    {
+      title: "Six steps to one decision",
+      caption: "A dense control flow simplified around the core user decision.",
+      meta: "Workflow",
+      type: "controls"
+    },
+    {
+      title: "Card clarity",
+      caption: "Visual assignment patterns helped users understand what would actually change.",
+      meta: "Fleet UX",
+      type: "dashboard"
+    },
+    {
+      title: "Confidence language",
+      caption: "Completion states and alerts were reshaped to reduce uncertainty.",
+      meta: "Task success",
+      type: "system"
+    }
+  ],
+  "hackers-golf": [
+    {
+      title: "Round setup",
+      caption: "Game packs and player setup built for a group standing at the tee box.",
+      meta: "Social golf",
+      type: "golf"
+    },
+    {
+      title: "Fast scoring",
+      caption: "Score updates and leaderboards designed to stay out of the way mid-round.",
+      meta: "Mobile play",
+      type: "mobile"
+    },
+    {
+      title: "Card rules",
+      caption: "Casual games translated into readable cards, cart mode, and clear moments.",
+      meta: "Game mechanics",
+      type: "system"
+    }
+  ],
+  "pace-chase": [
+    {
+      title: "Pace calculator",
+      caption: "Fast inputs for athletes who need split answers without spreadsheet friction.",
+      meta: "Race math",
+      type: "pace"
+    },
+    {
+      title: "Finish forecast",
+      caption: "Clear projections help runners understand what a pace means on race day.",
+      meta: "Confidence",
+      type: "mobile"
+    },
+    {
+      title: "Training modes",
+      caption: "Running, swimming, triathlon, HYROX, and splits share one simple language.",
+      meta: "Athlete tools",
+      type: "system"
+    }
+  ],
+  "city-scout": [
+    {
+      title: "Local intent",
+      caption: "A discovery flow for people deciding where to eat, drink, or spend time.",
+      meta: "Neighborhoods",
+      type: "map"
+    },
+    {
+      title: "Curated list",
+      caption: "Comparison-first venue cards replaced generic search result overload.",
+      meta: "Discovery UX",
+      type: "dashboard"
+    },
+    {
+      title: "Mobile choice",
+      caption: "The flow was shaped around quick decisions while already out in the city.",
+      meta: "Prototype",
+      type: "mobile"
+    }
+  ],
+  "kris-goyri": [
+    {
+      title: "Collection story",
+      caption: "Seasonal imagery and commerce paths balanced editorial feel with shopping clarity.",
+      meta: "Fashion",
+      type: "commerce"
+    },
+    {
+      title: "Responsive shop",
+      caption: "The site needed to stay polished across devices while collections changed.",
+      meta: "Shopify",
+      type: "dashboard"
+    },
+    {
+      title: "Premium maintenance",
+      caption: "A multi-year partnership focused on keeping the brand fresh and shoppable.",
+      meta: "2019-2025",
+      type: "system"
+    }
+  ],
+  boxfox: [
+    {
+      title: "Workout builder",
+      caption: "Programming tools for coaches and athletes who want to move faster than a spreadsheet.",
+      meta: "Fitness UX",
+      type: "fitness"
+    },
+    {
+      title: "Round structure",
+      caption: "AMRAPs, intervals, and movement blocks turned into quick editable patterns.",
+      meta: "Training flow",
+      type: "dashboard"
+    },
+    {
+      title: "Preview before share",
+      caption: "The product focuses on making a session readable before it gets sent out.",
+      meta: "Codex build",
+      type: "system"
+    }
+  ]
+};
 
 const experience = [
   {
@@ -1142,7 +1345,7 @@ function ProjectModal({ project, close, previous, next }) {
             <h2 id="project-title">{project.title}</h2>
             <p>{project.summary}</p>
             {project.projectUrl && (
-              <a className="project-live-link" href={project.projectUrl}>
+              <a className="project-live-link" href={project.projectUrl} target="_blank" rel="noreferrer">
                 <ArrowUpRight size={17} />
                 <span>View this project</span>
               </a>
@@ -1159,9 +1362,11 @@ function ProjectModal({ project, close, previous, next }) {
         </div>
 
         <div className="case-study-grid">
-          <CaseBlock title="The Challenge" text={project.challenge} />
-          <CaseBlock title="The Solution" text={project.solution} />
+          <CaseBlock title="Problem we started with" text={project.challenge} />
+          <CaseBlock title="How I focused the solution" text={project.solution} />
         </div>
+
+        <ProjectDetailGallery project={project} />
 
         <section className="process-panel">
           <div>
@@ -1230,6 +1435,52 @@ function CaseBlock({ title, text }) {
     <section className="case-block">
       <h3>{title}</h3>
       <p>{text}</p>
+    </section>
+  );
+}
+
+function ProjectDetailGallery({ project }) {
+  const visuals = projectDetailVisuals[project.id] || [];
+
+  if (!visuals.length) return null;
+
+  return (
+    <section className="detail-visual-section">
+      <div className="detail-visual-heading">
+        <p className="section-label">Product detail</p>
+        <h3>What the solution needed to make clear</h3>
+      </div>
+      <div className="detail-visual-grid">
+        {visuals.map((visual) => (
+          <article className="detail-visual-card" key={`${project.id}-${visual.title}`}>
+            <div className={`detail-screen is-${visual.type}`} aria-hidden="true">
+              <div className="detail-screen-top">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="detail-screen-body">
+                <strong>{visual.title}</strong>
+                <div className="detail-screen-lines">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="detail-screen-orbit">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </div>
+            <div className="detail-visual-copy">
+              <span>{visual.meta}</span>
+              <h4>{visual.title}</h4>
+              <p>{visual.caption}</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }
