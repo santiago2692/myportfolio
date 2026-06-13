@@ -1801,9 +1801,16 @@ button {
 
 .modal-hero h2 {
   margin: 0 0 20px;
+  padding: 0.04em 0 0.16em;
   font-size: clamp(3rem, 6.4vw, 7rem);
-  line-height: 0.96;
+  line-height: 1.14;
   letter-spacing: 0;
+  overflow-wrap: break-word;
+  overflow: visible;
+}
+
+.modal-hero h2.is-long-title {
+  font-size: clamp(2.75rem, 5.1vw, 5.5rem);
 }
 
 .modal-hero p:not(.project-meta) {
@@ -1915,9 +1922,11 @@ button {
 .detail-visual-heading h3 {
   max-width: 620px;
   margin: 0;
+  padding: 0.04em 0 0.14em;
   font-size: clamp(1.45rem, 2.8vw, 2.65rem);
-  line-height: 1;
+  line-height: 1.18;
   letter-spacing: 0;
+  overflow: visible;
 }
 
 .detail-visual-grid {
@@ -1996,7 +2005,7 @@ button {
   max-width: 220px;
   color: var(--text);
   font-size: clamp(1.1rem, 1.7vw, 1.45rem);
-  line-height: 1.05;
+  line-height: 1.14;
   letter-spacing: 0;
 }
 
@@ -2110,7 +2119,7 @@ button {
 .detail-visual-copy h4 {
   margin: 0;
   font-size: 1.05rem;
-  line-height: 1.15;
+  line-height: 1.25;
   letter-spacing: 0;
 }
 
@@ -2144,9 +2153,11 @@ button {
 .process-panel h3,
 .outcomes h3 {
   margin: 0;
+  padding-bottom: 0.06em;
   font-size: clamp(1.35rem, 2.3vw, 2.2rem);
-  line-height: 1.08;
+  line-height: 1.16;
   letter-spacing: 0;
+  overflow: visible;
 }
 
 .process-list {
@@ -2481,6 +2492,11 @@ button {
 
   .modal-hero h2 {
     font-size: clamp(2.6rem, 12vw, 4.4rem);
+    line-height: 1.18;
+  }
+
+  .modal-hero h2.is-long-title {
+    font-size: clamp(2.35rem, 10.5vw, 3.8rem);
   }
 
   .modal-nav,

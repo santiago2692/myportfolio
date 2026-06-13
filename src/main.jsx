@@ -1342,7 +1342,9 @@ function ProjectModal({ project, close, previous, next }) {
             <p className="project-meta">
               {project.category} / {project.year}
             </p>
-            <h2 id="project-title">{project.title}</h2>
+            <h2 id="project-title" className={project.title.length > 24 ? "is-long-title" : undefined}>
+              {project.title}
+            </h2>
             <p>{project.summary}</p>
             {project.projectUrl && (
               <a className="project-live-link" href={project.projectUrl} target="_blank" rel="noreferrer">
