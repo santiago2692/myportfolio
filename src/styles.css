@@ -994,6 +994,76 @@ button {
   transition: transform 700ms var(--ease);
 }
 
+.project-visual.has-product-image {
+  place-items: stretch;
+  overflow: hidden;
+  background: #08080a;
+}
+
+.project-visual.has-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.01);
+}
+
+.project-visual.has-product-image.is-contained {
+  padding: clamp(42px, 9vw, 96px);
+  background:
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 18rem),
+    #101012;
+}
+
+.project-visual.has-product-image.is-contained img {
+  object-fit: contain;
+  transform: none;
+}
+
+.project-visual.has-product-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(6, 6, 8, 0.06), rgba(6, 6, 8, 0.54)),
+    radial-gradient(circle at 22% 16%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 18rem);
+}
+
+.project-card .project-image-overlay {
+  display: none;
+}
+
+.project-image-overlay {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(6, 6, 8, 0.68);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(16px);
+}
+
+.project-image-overlay span {
+  color: color-mix(in srgb, var(--accent) 78%, white 12%);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-image-overlay strong {
+  color: var(--text);
+  font-size: clamp(1.1rem, 2vw, 1.65rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
 [data-accent="violet"] {
   --accent: var(--violet);
 }
@@ -1799,6 +1869,22 @@ button {
   border-radius: var(--radius);
 }
 
+.modal-hero .project-visual.has-product-image {
+  min-height: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-hero .project-visual.has-product-image img {
+  object-position: center;
+}
+
+.modal-hero .project-image-overlay {
+  display: grid;
+  right: 22px;
+  bottom: 22px;
+  left: 22px;
+}
+
 .modal-hero h2 {
   margin: 0 0 20px;
   padding: 0.04em 0 0.16em;
@@ -1955,6 +2041,50 @@ button {
   background:
     linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, transparent), transparent 58%),
     #151517;
+}
+
+.detail-product-shot {
+  position: relative;
+  min-height: 220px;
+  margin: 0;
+  overflow: hidden;
+  background: #08080a;
+}
+
+.detail-product-shot::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(7, 7, 9, 0), rgba(7, 7, 9, 0.26)),
+    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 16rem);
+}
+
+.detail-product-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.04) contrast(1.02);
+}
+
+.detail-product-shot.is-contained {
+  display: grid;
+  place-items: center;
+  padding: clamp(36px, 7vw, 70px);
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 14rem),
+    #101012;
+}
+
+.detail-product-shot.is-contained img {
+  width: min(220px, 72%);
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
 }
 
 .detail-screen::before,
@@ -2488,6 +2618,22 @@ button {
 
   .modal-hero .project-visual {
     min-height: 320px;
+  }
+
+  .modal-hero .project-visual.has-product-image {
+    min-height: 280px;
+  }
+
+  .modal-hero .project-image-overlay {
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    padding: 12px;
+  }
+
+  .detail-product-shot,
+  .detail-product-shot img {
+    min-height: 210px;
   }
 
   .modal-hero h2 {

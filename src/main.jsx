@@ -40,6 +40,8 @@ const projects = [
     accent: "violet",
     platform: ["Website", "Product studio", "React"],
     projectUrl: "https://tigermindlabs.com/",
+    previewImage: "https://tigermindlabs.com/city-poc/tigermindlabs-city-hero.png",
+    previewAlt: "TigerMindLabs city product portfolio preview",
     summary:
       "A refreshed home for the company I co-founded with Kyle Beard, where we explore ideas, launch apps, and turn hobbies into polished digital products.",
     role: "Co-founder with Kyle Beard, product designer, builder",
@@ -66,31 +68,33 @@ const projects = [
     id: "milo",
     title: "Milo",
     year: "2026",
-    type: "Personal productivity product",
+    type: "Shared agenda app",
     category: "Built with Codex",
     accent: "emerald",
-    platform: ["Mobile", "Shared agenda", "Google Play"],
+    platform: ["Live web app", "iOS App Store", "Product Hunt"],
     projectUrl: "https://tigermindlabs.com/milo/",
+    previewImage: "/project-images/milo-product-preview.png",
+    previewAlt: "Milo shared agenda product page and live app preview",
     summary:
-      "A shared agenda product for couples, families, and small groups that need a calmer way to coordinate what is happening today.",
-    role: "Product designer and solo builder",
-    timeline: "Latest build",
+      "A live agenda app for creating shared calendars, adding events, switching between list and calendar views, and keeping everyday plans in one place.",
+    role: "Product designer and solo builder with Codex",
+    timeline: "Live web app / App Store",
     challenge:
-      "Most calendars are optimized for heavy scheduling, but daily coordination often needs lightweight context, shared visibility, and fast edits.",
+      "Most calendars are optimized for heavy scheduling, but daily coordination for couples, families, and small groups needs shared visibility, fast edits, and calmer context.",
     solution:
-      "Milo focuses on the day view, shared agenda moments, and simple handoffs so people can understand what matters without managing a heavyweight calendar.",
+      "Milo focuses on shared agendas, list and month calendar views, event categories, and a live web/app experience so everyone can understand the same plan without managing a heavyweight calendar.",
     process: [
       "Mapped common coordination moments for couples, families, and small groups",
-      "Prioritized a calm day-view model over dense calendar mechanics",
-      "Used Codex to move from product concept into working app patterns quickly"
+      "Prioritized shared agendas, calendar views, and event categories as the core product architecture",
+      "Used Codex to move from product concept into a live web app, iOS release, and Product Hunt launch story"
     ],
     skills: ["Solo product build", "Mobile UX", "Shared planning", "Codex workflow"],
     outcomes: [
-      "Designed and built independently with Codex as a development partner",
-      "Created a product language for shared planning, day status, and lightweight task context",
-      "Prepared the app for iterative mobile distribution and feedback"
+      "Created a live web app preview that lets visitors try the real Milo experience",
+      "Shipped the iOS App Store presence and Product Hunt launch path through TigerMindLabs",
+      "Built a calm product language for shared planning, day status, and lightweight calendar context"
     ],
-    metrics: ["Solo build", "Mobile-first", "Shared planning"],
+    metrics: ["Live web app", "App Store", "Product Hunt"],
     featured: true
   },
   {
@@ -192,6 +196,8 @@ const projects = [
     accent: "lime",
     platform: ["Mobile app", "Game scoring", "App Store"],
     projectUrl: "https://tigermindlabs.com/hackers-golf/",
+    previewImage: "/project-images/hackers-golf-product-preview.png",
+    previewAlt: "Hackers Golf product page and mobile app preview",
     summary:
       "A playful golf app that makes rounds more social through game packs, scoring, leaderboards, and cart-mode rules.",
     role: "Product designer, co-builder",
@@ -214,6 +220,38 @@ const projects = [
     metrics: ["App Store", "Game packs", "Cart mode"]
   },
   {
+    id: "cards-of-chaos",
+    title: "Cards of Chaos",
+    year: "2026",
+    type: "Golf card game",
+    category: "Built with Codex",
+    accent: "lime",
+    platform: ["iOS app", "Golf cards", "App Store"],
+    projectUrl: "https://tigermindlabs.com/cards-of-chaos/",
+    previewImage: "/project-images/cards-of-chaos-product-preview.png",
+    previewAlt: "Cards of Chaos golf-card game product page and app preview",
+    summary:
+      "A fast, unpredictable golf companion from the Hackers Golf family where players draw cards, trigger wild round twists, and keep the group laughing.",
+    role: "Product designer and builder",
+    timeline: "Latest launch",
+    challenge:
+      "Casual golf rounds can feel familiar after the first few holes, and most scoring apps are too serious to create playful group moments.",
+    solution:
+      "Cards of Chaos turns the round into a lightweight card game: draw between holes, reveal a twist, and add just enough unpredictability without slowing play.",
+    process: [
+      "Pulled the product out of the Hackers Golf universe into a simpler standalone game loop",
+      "Designed the core deck, round-twist, and group-energy moments around fast tee-box decisions",
+      "Used Codex to quickly shape the product page, app preview, launch narrative, and reusable product patterns"
+    ],
+    skills: ["Game mechanics", "Mobile product design", "Codex workflow", "Launch storytelling"],
+    outcomes: [
+      "Created a standalone product story for the Hackers Golf family",
+      "Focused the experience on a dead-simple draw-card action that groups can understand instantly",
+      "Prepared the App Store path with a sharper preview of the product's personality"
+    ],
+    metrics: ["App Store", "Golf cards", "Hackers Golf family"]
+  },
+  {
     id: "pace-chase",
     title: "PaceChase",
     year: "2024",
@@ -222,6 +260,8 @@ const projects = [
     accent: "blue",
     platform: ["Mobile app", "Running", "App Store"],
     projectUrl: "https://tigermindlabs.com/pacechase/",
+    previewImage: "/project-images/pacechase-product-preview.png",
+    previewAlt: "PaceChase race strategy product page and mobile app preview",
     summary:
       "A pace-tracking and planning app for runners and athletes who need fast splits, finish predictions, and race-day confidence.",
     role: "Product designer, co-builder",
@@ -252,6 +292,9 @@ const projects = [
     accent: "amber",
     platform: ["Web", "Mobile prototype"],
     projectUrl: "https://tigermindlabs.com/cityscout/",
+    previewImage: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/cfd8a634-fd37-4e68-a873-5e3ae2e6f012_320w.png",
+    previewFit: "contain",
+    previewAlt: "CityScout app icon for curated city guides",
     summary:
       "A local discovery concept for finding food, drinks, and entertainment through curated, accessible neighborhood information.",
     role: "Product designer",
@@ -282,6 +325,9 @@ const projects = [
     accent: "pink",
     platform: ["Shopify", "Web design"],
     projectUrl: "https://krisgoyri.com/",
+    previewImage: "https://krisgoyri.com/cdn/shop/files/KG_Logo_Black.png",
+    previewFit: "contain",
+    previewAlt: "Kris Goyri fashion commerce brand mark",
     summary:
       "A long-running Shopify commerce partnership with a fashion brand, supporting seasonal updates, strong imagery, and clear product storytelling from 2019 to 2025.",
     role: "Designer and web builder",
@@ -312,6 +358,8 @@ const projects = [
     accent: "red",
     platform: ["Web app", "Workout builder"],
     projectUrl: "https://tigermindlabs.com/boxfox/",
+    previewImage: "/project-images/boxfox-product-preview.png",
+    previewAlt: "BoxFox workout builder product page and mobile app preview",
     summary:
       "A training and workout-building product experiment focused on fast programming, clear rounds, and useful workout previews.",
     role: "Solo builder",
@@ -341,7 +389,9 @@ const projectDetailVisuals = {
       title: "Studio map",
       caption: "A home base that connects product experiments, founder story, and live launches.",
       meta: "Brand system",
-      type: "studio"
+      type: "studio",
+      image: "https://tigermindlabs.com/city-poc/tigermindlabs-city-hero.png",
+      imageAlt: "Isometric TigerMindLabs city with product neighborhoods"
     },
     {
       title: "Product worlds",
@@ -358,20 +408,22 @@ const projectDetailVisuals = {
   ],
   milo: [
     {
-      title: "Today view",
-      caption: "A calm shared agenda for people who need to know what is happening now.",
-      meta: "Shared planning",
-      type: "agenda"
+      title: "Live product preview",
+      caption: "The product page now lets people try the real Milo experience directly in a phone frame.",
+      meta: "Live web app",
+      type: "agenda",
+      image: "/project-images/milo-product-preview.png",
+      imageAlt: "Milo product page with shared agenda feature preview"
     },
     {
-      title: "Quick handoff",
-      caption: "Lightweight context, status, and edits without heavy calendar mechanics.",
-      meta: "Family flow",
+      title: "Shared agendas",
+      caption: "Shared calendars, event categories, and list/month views keep everyone oriented around the same plan.",
+      meta: "Core flow",
       type: "mobile"
     },
     {
       title: "Less coordination drag",
-      caption: "Built around the daily question: what do we need to remember together?",
+      caption: "Built around the daily question: what do we need to see, remember, and update together?",
       meta: "Customer problem",
       type: "system"
     }
@@ -438,10 +490,12 @@ const projectDetailVisuals = {
   ],
   "hackers-golf": [
     {
-      title: "Round setup",
-      caption: "Game packs and player setup built for a group standing at the tee box.",
-      meta: "Social golf",
-      type: "golf"
+      title: "Game lobby",
+      caption: "The live product story shows the round setup, group flow, and mobile-first golf companion experience.",
+      meta: "Product page",
+      type: "golf",
+      image: "/project-images/hackers-golf-product-preview.png",
+      imageAlt: "Hackers Golf product page with game lobby app preview"
     },
     {
       title: "Fast scoring",
@@ -456,12 +510,36 @@ const projectDetailVisuals = {
       type: "system"
     }
   ],
+  "cards-of-chaos": [
+    {
+      title: "Chaos deck",
+      caption: "The product preview makes the core loop obvious: draw a card, read the twist, and play it before the next hole.",
+      meta: "Latest launch",
+      type: "golf",
+      image: "/project-images/cards-of-chaos-product-preview.png",
+      imageAlt: "Cards of Chaos product page with golf-card game preview"
+    },
+    {
+      title: "Round twists",
+      caption: "A familiar golf round gets a new social layer through quick prompts like pressure putts, mulligans, and wild drives.",
+      meta: "Game loop",
+      type: "mobile"
+    },
+    {
+      title: "Group energy",
+      caption: "The design keeps the interaction light enough for the course while giving the group something funny to react to.",
+      meta: "Customer problem",
+      type: "system"
+    }
+  ],
   "pace-chase": [
     {
-      title: "Pace calculator",
-      caption: "Fast inputs for athletes who need split answers without spreadsheet friction.",
-      meta: "Race math",
-      type: "pace"
+      title: "Race strategy studio",
+      caption: "The product preview makes pace, finish time, and speed changes visual enough to understand at a glance.",
+      meta: "Product page",
+      type: "pace",
+      image: "/project-images/pacechase-product-preview.png",
+      imageAlt: "PaceChase product page with running pace app preview"
     },
     {
       title: "Finish forecast",
@@ -481,7 +559,10 @@ const projectDetailVisuals = {
       title: "Local intent",
       caption: "A discovery flow for people deciding where to eat, drink, or spend time.",
       meta: "Neighborhoods",
-      type: "map"
+      type: "map",
+      image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/cfd8a634-fd37-4e68-a873-5e3ae2e6f012_320w.png",
+      imageFit: "contain",
+      imageAlt: "CityScout app icon for curated city guides"
     },
     {
       title: "Curated list",
@@ -501,7 +582,10 @@ const projectDetailVisuals = {
       title: "Collection story",
       caption: "Seasonal imagery and commerce paths balanced editorial feel with shopping clarity.",
       meta: "Fashion",
-      type: "commerce"
+      type: "commerce",
+      image: "https://krisgoyri.com/cdn/shop/files/KG_Logo_Black.png",
+      imageFit: "contain",
+      imageAlt: "Kris Goyri brand mark"
     },
     {
       title: "Responsive shop",
@@ -519,9 +603,11 @@ const projectDetailVisuals = {
   boxfox: [
     {
       title: "Workout builder",
-      caption: "Programming tools for coaches and athletes who want to move faster than a spreadsheet.",
-      meta: "Fitness UX",
-      type: "fitness"
+      caption: "The product preview shows a focused programming flow for coaches and athletes who want cleaner session planning.",
+      meta: "Product page",
+      type: "fitness",
+      image: "/project-images/boxfox-product-preview.png",
+      imageAlt: "BoxFox product page with workout builder app preview"
     },
     {
       title: "Round structure",
@@ -622,7 +708,7 @@ const toolbox = [
   { name: "Notion", detail: "Planning, documentation, launch notes, and team clarity.", icon: Layers3 }
 ];
 
-const productSignals = ["Tiger Mind Labs", "Milo", "PaceChase", "Hackers Golf", "BoxFox", "WEXpert"];
+const productSignals = ["Tiger Mind Labs", "Milo", "Cards of Chaos", "PaceChase", "Hackers Golf", "BoxFox", "WEXpert"];
 
 const navItems = [
   ["Work", "#work"],
@@ -1025,6 +1111,24 @@ function ProjectCard({ project, index, openProject }) {
 }
 
 function ProjectVisual({ project }) {
+  if (project.previewImage) {
+    const visualClassName = ["project-visual", "has-product-image"];
+
+    if (project.previewFit === "contain") {
+      visualClassName.push("is-contained");
+    }
+
+    return (
+      <div className={visualClassName.join(" ")}>
+        <img src={project.previewImage} alt={project.previewAlt || `${project.title} product preview`} loading="lazy" />
+        <div className="project-image-overlay">
+          <span>{project.type}</span>
+          <strong>{project.title}</strong>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="project-visual">
       <div className="screen-shell">
@@ -1453,35 +1557,49 @@ function ProjectDetailGallery({ project }) {
         <h3>What the solution needed to make clear</h3>
       </div>
       <div className="detail-visual-grid">
-        {visuals.map((visual) => (
-          <article className="detail-visual-card" key={`${project.id}-${visual.title}`}>
-            <div className={`detail-screen is-${visual.type}`} aria-hidden="true">
-              <div className="detail-screen-top">
-                <span />
-                <span />
-                <span />
-              </div>
-              <div className="detail-screen-body">
-                <strong>{visual.title}</strong>
-                <div className="detail-screen-lines">
-                  <span />
-                  <span />
-                  <span />
+        {visuals.map((visual) => {
+          const shotClassName = ["detail-product-shot"];
+
+          if (visual.imageFit === "contain") {
+            shotClassName.push("is-contained");
+          }
+
+          return (
+            <article className="detail-visual-card" key={`${project.id}-${visual.title}`}>
+              {visual.image ? (
+                <figure className={shotClassName.join(" ")}>
+                  <img src={visual.image} alt={visual.imageAlt || visual.title} loading="lazy" />
+                </figure>
+              ) : (
+                <div className={`detail-screen is-${visual.type}`} aria-hidden="true">
+                  <div className="detail-screen-top">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="detail-screen-body">
+                    <strong>{visual.title}</strong>
+                    <div className="detail-screen-lines">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                    <div className="detail-screen-orbit">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
                 </div>
-                <div className="detail-screen-orbit">
-                  <span />
-                  <span />
-                  <span />
-                </div>
+              )}
+              <div className="detail-visual-copy">
+                <span>{visual.meta}</span>
+                <h4>{visual.title}</h4>
+                <p>{visual.caption}</p>
               </div>
-            </div>
-            <div className="detail-visual-copy">
-              <span>{visual.meta}</span>
-              <h4>{visual.title}</h4>
-              <p>{visual.caption}</p>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
