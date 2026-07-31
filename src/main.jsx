@@ -227,7 +227,7 @@ const projects = [
     category: "Built with Codex",
     accent: "lime",
     platform: ["iOS app", "Golf cards", "App Store"],
-    projectUrl: "https://tigermindlabs.com/cards-of-chaos/",
+    projectUrl: "/cardsofchaos/",
     previewImage: "/project-images/cards-of-chaos/draw-card-promo.jpg",
     previewAlt: "Cards of Chaos draw-card mobile product promo",
     summary:
