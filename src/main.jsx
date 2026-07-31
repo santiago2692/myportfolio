@@ -1530,8 +1530,6 @@ function ProjectModal({ project, close, previous, next }) {
 
         <ProjectDeviceShowcase project={project} />
 
-        <ProjectDetailGallery project={project} />
-
         <section className="process-panel">
           <div>
             <p className="section-label">Process</p>
@@ -1653,66 +1651,6 @@ function DeviceSection({ section, variant }) {
         ))}
       </div>
     </div>
-  );
-}
-
-function ProjectDetailGallery({ project }) {
-  const visuals = projectDetailVisuals[project.id] || [];
-
-  if (!visuals.length) return null;
-
-  return (
-    <section className="detail-visual-section">
-      <div className="detail-visual-heading">
-        <p className="section-label">Product detail</p>
-        <h3>What the solution needed to make clear</h3>
-      </div>
-      <div className="detail-visual-grid">
-        {visuals.map((visual) => {
-          const shotClassName = ["detail-product-shot"];
-
-          if (visual.imageFit === "contain") {
-            shotClassName.push("is-contained");
-          }
-
-          return (
-            <article className="detail-visual-card" key={`${project.id}-${visual.title}`}>
-              {visual.image ? (
-                <figure className={shotClassName.join(" ")}>
-                  <img src={visual.image} alt={visual.imageAlt || visual.title} loading="lazy" />
-                </figure>
-              ) : (
-                <div className={`detail-screen is-${visual.type}`} aria-hidden="true">
-                  <div className="detail-screen-top">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className="detail-screen-body">
-                    <strong>{visual.title}</strong>
-                    <div className="detail-screen-lines">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                    <div className="detail-screen-orbit">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div className="detail-visual-copy">
-                <span>{visual.meta}</span>
-                <h4>{visual.title}</h4>
-                <p>{visual.caption}</p>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </section>
   );
 }
 
