@@ -228,8 +228,8 @@ const projects = [
     accent: "lime",
     platform: ["iOS app", "Golf cards", "App Store"],
     projectUrl: "https://tigermindlabs.com/cards-of-chaos/",
-    previewImage: "/project-images/cards-of-chaos-product-preview.png",
-    previewAlt: "Cards of Chaos golf-card game product page and app preview",
+    previewImage: "/project-images/cards-of-chaos/draw-card-promo.jpg",
+    previewAlt: "Cards of Chaos draw-card mobile product promo",
     summary:
       "A fast, unpredictable golf companion from the Hackers Golf family where players draw cards, trigger wild round twists, and keep the group laughing.",
     role: "Product designer and builder",
@@ -516,7 +516,7 @@ const projectDetailVisuals = {
       caption: "The product preview makes the core loop obvious: draw a card, read the twist, and play it before the next hole.",
       meta: "Latest launch",
       type: "golf",
-      image: "/project-images/cards-of-chaos-product-preview.png",
+      image: "/project-images/cards-of-chaos/draw-card-promo.jpg",
       imageAlt: "Cards of Chaos product page with golf-card game preview"
     },
     {
@@ -622,6 +622,62 @@ const projectDetailVisuals = {
       type: "system"
     }
   ]
+};
+
+const projectDeviceShowcases = {
+  milo: {
+    web: {
+      eyebrow: "Web app + iOS",
+      title: "Shared agendas that move from preview to live planning.",
+      summary:
+        "Milo is built around one calm product promise: create a shared agenda, add the plans that matter, and switch between list and calendar views without turning everyday coordination into calendar admin.",
+      screens: [
+        {
+          title: "Try the live experience",
+          caption:
+            "The TigerMindLabs product page lets visitors open the real Milo app preview, then continue into the full live app, App Store, or Product Hunt launch.",
+          image: "/project-images/milo-product-preview.png",
+          alt: "Milo live web app and product preview"
+        }
+      ],
+      signals: ["Live web app", "App Store", "Product Hunt", "Shared calendars"]
+    }
+  },
+  "cards-of-chaos": {
+    mobile: {
+      eyebrow: "Mobile app",
+      title: "A round-by-round mobile flow built for the course.",
+      summary:
+        "Cards of Chaos works because the mobile flow stays obvious while the game itself gets weird. Players can start a round, choose a deck, draw a card, and follow the live round without the interface slowing down the group.",
+      screens: [
+        {
+          title: "Start the round",
+          caption: "The opening state frames the product promise fast: start a round, invite the group, and pick a deck.",
+          image: "/project-images/cards-of-chaos/start-round.png",
+          alt: "Cards of Chaos start round screen"
+        },
+        {
+          title: "Choose a deck",
+          caption: "Deck selection makes the content model visible, with locked packs and card counts that hint at expansion.",
+          image: "/project-images/cards-of-chaos/choose-deck.png",
+          alt: "Cards of Chaos choose deck screen"
+        },
+        {
+          title: "Draw the chaos",
+          caption: "The card reveal is the emotional moment: dramatic, readable, and built for a group reaction.",
+          image: "/project-images/cards-of-chaos/card-draw.png",
+          alt: "Cards of Chaos card draw reveal screen"
+        },
+        {
+          title: "Track live rounds",
+          caption: "The live-round view keeps the group connected with current and past rounds, card counts, and invites.",
+          image: "/project-images/cards-of-chaos/live-rounds.png",
+          alt: "Cards of Chaos live rounds screen"
+        }
+      ],
+      signals: ["iOS-first", "Deck economy", "Live rounds", "Group play"]
+    }
+  }
 };
 
 const experience = [
@@ -1472,6 +1528,8 @@ function ProjectModal({ project, close, previous, next }) {
           <CaseBlock title="How I focused the solution" text={project.solution} />
         </div>
 
+        <ProjectDeviceShowcase project={project} />
+
         <ProjectDetailGallery project={project} />
 
         <section className="process-panel">
@@ -1542,6 +1600,59 @@ function CaseBlock({ title, text }) {
       <h3>{title}</h3>
       <p>{text}</p>
     </section>
+  );
+}
+
+function ProjectDeviceShowcase({ project }) {
+  const showcase = projectDeviceShowcases[project.id];
+
+  if (!showcase) return null;
+
+  return (
+    <section className="device-showcase">
+      {showcase.mobile ? <DeviceSection variant="mobile" section={showcase.mobile} /> : null}
+      {showcase.web ? <DeviceSection variant="web" section={showcase.web} /> : null}
+    </section>
+  );
+}
+
+function DeviceSection({ section, variant }) {
+  const isWeb = variant === "web";
+  const trackClass = isWeb ? "web-screen-track" : "mobile-screen-track";
+  const cardClass = isWeb ? "web-screen-card" : "mobile-screen-card";
+  const frameClass = isWeb ? "web-screen-frame" : "mobile-screen-frame";
+
+  return (
+    <div className={`device-section is-${variant}`}>
+      <div className="device-section-copy">
+        <p className="section-label">{section.eyebrow}</p>
+        <h3>{section.title}</h3>
+        <p>{section.summary}</p>
+        {section.signals?.length ? (
+          <div className="device-signal-row">
+            {section.signals.map((signal) => (
+              <span key={signal}>{signal}</span>
+            ))}
+          </div>
+        ) : null}
+      </div>
+      <div className={trackClass} aria-label={`${section.eyebrow} screenshots`}>
+        {section.screens.map((screen, index) => (
+          <article className={cardClass} key={screen.title}>
+            <div className={frameClass}>
+              <img src={screen.image} alt={screen.alt || screen.title} loading="lazy" />
+            </div>
+            <div className="mobile-screen-caption">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h4>{screen.title}</h4>
+                <p>{screen.caption}</p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
   );
 }
 
