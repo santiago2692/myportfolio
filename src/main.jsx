@@ -1386,10 +1386,6 @@ function ProjectVisual({ project }) {
     return (
       <div className={visualClassName.join(" ")}>
         <img src={project.previewImage} alt={project.previewAlt || `${project.title} product preview`} loading="lazy" />
-        <div className="project-image-overlay">
-          <span>{project.type}</span>
-          <strong>{project.title}</strong>
-        </div>
       </div>
     );
   }
@@ -1403,9 +1399,9 @@ function ProjectVisual({ project }) {
           <span />
         </div>
         <div className="screen-content">
-          <div className="screen-title">{project.title}</div>
           <div className="screen-row wide" />
           <div className="screen-row" />
+          <div className="screen-row short" />
           <div className="mini-grid">
             <span />
             <span />
@@ -1425,21 +1421,26 @@ function ProjectVisual({ project }) {
 
 function WexCaseVisual({ visual }) {
   return (
-    <div className="case-visual">
-      <div className="case-visual-header">
-        <span>{visual.label}</span>
-        <strong>{visual.metric}</strong>
-        <p>{visual.metricLabel}</p>
+    <div className="case-visual" aria-label={`${visual.label}: ${visual.metric} ${visual.metricLabel}`}>
+      <div className="case-visual-header" aria-hidden="true">
+        <span />
+        <span />
+        <span />
       </div>
-      <div className="case-map">
+      <div className="case-map" aria-hidden="true">
         {visual.nodes.map((node, index) => (
           <div className="case-node" key={node} style={{ "--node-index": index }}>
             <span />
-            <p>{node}</p>
+            <i />
+            <i />
           </div>
         ))}
       </div>
-      <small>{visual.footer}</small>
+      <div className="case-visual-footer" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
     </div>
   );
 }
