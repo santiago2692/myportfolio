@@ -62,6 +62,13 @@ const projects = [
       "A sharper bridge between personal portfolio work and the studio brand"
     ],
     metrics: ["Studio", "Self-built", "Codex workflow"],
+    badges: ["Co-founded", "Built with Codex", "Shipped product"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Co-founded Tiger Mind Labs with Kyle Beard as a place to turn product instincts, hobbies, and new ideas into real shipped experiences.",
+      "Designed and built the portfolio structure around product worlds, launch proof, and clear paths into each live project.",
+      "Codex is part of the operating rhythm: faster scaffolding, sharper iteration, and more room to test ideas while preserving the craft."
+    ],
     featured: true
   },
   {
@@ -95,6 +102,13 @@ const projects = [
       "Built a calm product language for shared planning, day status, and lightweight calendar context"
     ],
     metrics: ["Live web app", "App Store", "Product Hunt"],
+    badges: ["Built with Codex", "Shipped product", "Self-built"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Designed the core shared-agenda model, including events, categories, list/calendar views, and the calmer planning language.",
+      "Built the web app and launch preview with Codex so people can experience the product instead of only reading about it.",
+      "Learned how to simplify a broad calendar problem into one useful promise: shared visibility without calendar heaviness."
+    ],
     featured: true
   },
   {
@@ -125,6 +139,15 @@ const projects = [
       "Connected roadmap decisions to adoption, retention, customer satisfaction, and commercial outcomes"
     ],
     metrics: ["500K+ monthly customers", "20% fewer service calls", "Retention + NPS"],
+    badges: ["Led at WEX", "Leadership case study", "500K+ customers"],
+    hiringPath: "Leadership case studies",
+    caseVisual: {
+      label: "Service reduction system",
+      metric: "20%",
+      metricLabel: "fewer service calls",
+      nodes: ["Billing", "Statements", "Transactions", "Payments"],
+      footer: "Clearer states, better money movement, stronger customer confidence"
+    },
     featured: true
   },
   {
@@ -155,6 +178,15 @@ const projects = [
       "100% of participants reported satisfaction with the recommendation experience"
     ],
     metrics: ["OpenAI API", "Python", "100% satisfaction"],
+    badges: ["Led at WEX", "AI prototype", "100% satisfaction"],
+    hiringPath: "Leadership case studies",
+    caseVisual: {
+      label: "Recommendation engine",
+      metric: "100%",
+      metricLabel: "satisfaction",
+      nodes: ["Business need", "Conversational intake", "Product fit", "Clear answer"],
+      footer: "A 48-hour prototype that made discovery feel more human"
+    },
     featured: true
   },
   {
@@ -185,6 +217,15 @@ const projects = [
       "Card assignment clarity became visible directly in the flow"
     ],
     metrics: ["25% YoY adoption", "+35% task completion", "Fleet controls"],
+    badges: ["Led at WEX", "Leadership case study", "25% adoption lift"],
+    hiringPath: "Leadership case studies",
+    caseVisual: {
+      label: "Workflow simplification",
+      metric: "25%",
+      metricLabel: "YoY adoption lift",
+      nodes: ["Policy", "Cards", "Alerts", "Confirm"],
+      footer: "Reduced setup ambiguity while keeping enterprise controls intact"
+    },
     featured: true
   },
   {
@@ -217,7 +258,14 @@ const projects = [
       "Created a playful product language that still works on the course",
       "Launched through Tiger Mind Labs with continued iteration after release"
     ],
-    metrics: ["App Store", "Game packs", "Cart mode"]
+    metrics: ["App Store", "Game packs", "Cart mode"],
+    badges: ["Co-built", "Shipped product", "Tiger Mind Labs"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Turned casual golf rules into a mobile product system for setup, scoring, leaderboards, and cart-mode moments.",
+      "Worked through the tension between game energy and on-course speed, keeping interactions short enough for real rounds.",
+      "Used the launch as a foundation for spin-off product thinking, including Cards of Chaos."
+    ]
   },
   {
     id: "cards-of-chaos",
@@ -249,7 +297,14 @@ const projects = [
       "Focused the experience on a dead-simple draw-card action that groups can understand instantly",
       "Prepared the App Store path with a sharper preview of the product's personality"
     ],
-    metrics: ["App Store", "Golf cards", "Hackers Golf family"]
+    metrics: ["App Store", "Golf cards", "Hackers Golf family"],
+    badges: ["Built with Codex", "Shipped product", "App Store"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Built the product around one fast loop: start a round, pick a deck, draw a twist, and keep the group moving.",
+      "Designed the mobile screens, deck economy, card reveal, live rounds, App Store narrative, and product page direction.",
+      "Used Codex to accelerate the product page and keep the story visual, launchable, and easy to keep improving."
+    ]
   },
   {
     id: "pace-chase",
@@ -281,7 +336,14 @@ const projects = [
       "Created race-specific modes across running, swimming, triathlon, HYROX, and splits",
       "Launched publicly and continued refining from real athlete usage"
     ],
-    metrics: ["Race tools", "Splits", "Product Hunt"]
+    metrics: ["Race tools", "Splits", "Product Hunt"],
+    badges: ["Co-built", "Shipped product", "Tiger Mind Labs"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Translated pace math into quick, readable product flows for athletes who need answers before and during training.",
+      "Designed modes that keep different sports under one simple calculation language instead of fragmenting the experience.",
+      "Focused the launch story on confidence: what pace means, where it gets you, and how to adjust."
+    ]
   },
   {
     id: "city-scout",
@@ -314,7 +376,14 @@ const projects = [
       "Designed wireframes and prototypes in Figma",
       "Used testing feedback to improve search and content presentation"
     ],
-    metrics: ["Discovery", "Figma", "Prototype"]
+    metrics: ["Discovery", "Figma", "Prototype"],
+    badges: ["Product concept", "Tiger Mind Labs", "Prototype"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Explored a curated discovery model for people choosing where to go without scanning generic maps and review lists.",
+      "Designed the information architecture around quick comparison: neighborhood, vibe, category, and venue confidence.",
+      "Used the concept to practice product framing at the intersection of local search, curation, and mobile decision-making."
+    ]
   },
   {
     id: "kris-goyri",
@@ -347,7 +416,9 @@ const projects = [
       "Improved visual storytelling through lookbook-style commerce pages",
       "Maintained cross-device functionality and brand consistency"
     ],
-    metrics: ["2019-2025", "Shopify", "Fashion"]
+    metrics: ["2019-2025", "Shopify", "Fashion"],
+    badges: ["Client work", "Shopify", "2019-2025"],
+    hiringPath: "Client / brand work"
   },
   {
     id: "boxfox",
@@ -379,7 +450,14 @@ const projects = [
       "Established a compact UI language for workout creation",
       "Designed for iteration around coaches and athletes"
     ],
-    metrics: ["Workout builder", "AMRAP", "Codex build"]
+    metrics: ["Workout builder", "AMRAP", "Codex build"],
+    badges: ["Built with Codex", "Product experiment", "Tiger Mind Labs"],
+    hiringPath: "Self-built products",
+    builderNotes: [
+      "Defined a lightweight programming model for rounds, intervals, movements, and shareable workout previews.",
+      "Built the interface as a fast Codex-powered product experiment so the concept could be inspected, not imagined.",
+      "Used the project to sharpen a key product instinct: make the useful path faster than the workaround."
+    ]
   }
 ];
 
@@ -773,6 +851,72 @@ const toolbox = [
 
 const productSignals = ["500K+ monthly customers", "15+ person org", "8-12 initiatives", "Tiger Mind Labs", "Milo", "Cards of Chaos", "WEXpert"];
 
+const heroProof = [
+  { value: "500K+", label: "customers in product scope" },
+  { value: "15+", label: "product, design, research org" },
+  { value: "8-12", label: "initiatives led in parallel" },
+  { value: "Codex", label: "self-built portfolio and products" }
+];
+
+const builderProof = [
+  {
+    step: "Lead",
+    title: "Set the direction",
+    detail: "Connect customer needs, business priorities, research, and roadmap tradeoffs into a clear path."
+  },
+  {
+    step: "Design",
+    title: "Shape the system",
+    detail: "Turn ambiguity into flows, hierarchy, prototypes, and product language that teams can rally around."
+  },
+  {
+    step: "Build",
+    title: "Make it tangible",
+    detail: "Use React, Codex, and AI tooling to move from concept to working product with more velocity."
+  },
+  {
+    step: "Ship",
+    title: "Launch and learn",
+    detail: "Package the story, measure signals, improve the experience, and keep the work moving."
+  }
+];
+
+const hiringPaths = [
+  {
+    title: "Leadership case studies",
+    detail: "WEX work across fleet, payments, AI concepts, support reduction, adoption, and portfolio-scale design leadership.",
+    match: "WEX"
+  },
+  {
+    title: "Self-built products",
+    detail: "Tiger Mind Labs launches and experiments built from idea to usable product with Codex, React, and hands-on product craft.",
+    match: "Built with Codex + Tiger Mind Labs"
+  },
+  {
+    title: "Client / brand work",
+    detail: "Commerce and brand systems where visual quality, responsive execution, and practical delivery all matter.",
+    match: "Kris Goyri"
+  }
+];
+
+const portfolioSnapshot = [
+  {
+    title: "Who I am",
+    detail:
+      "Senior product and design leader across fintech, payments, mobility, SaaS, AI prototypes, and founder-led product building."
+  },
+  {
+    title: "Proof points",
+    detail:
+      "500K+ monthly customers, 15+ person org leadership, 8-12 concurrent initiatives, service-call reduction, adoption lift, and shipped products."
+  },
+  {
+    title: "What makes it different",
+    detail:
+      "This portfolio and the latest product work are self-built with Codex, so the work shows both leadership range and hands-on execution."
+  }
+];
+
 const navItems = [
   ["Work", "#work"],
   ["Profile", "#about"],
@@ -881,6 +1025,7 @@ function App() {
       <main>
         <Hero openContact={() => setContactOpen(true)} />
         <Marquee />
+        <BuilderSection />
         <Work
           filters={filters}
           filter={filter}
@@ -891,6 +1036,7 @@ function App() {
           openProject={openProject}
         />
         <ProfileSection />
+        <PortfolioSnapshot openContact={() => setContactOpen(true)} />
         <Contact openContact={() => setContactOpen(true)} />
       </main>
       <Footer />
@@ -971,6 +1117,14 @@ function Hero({ openContact }) {
             <Mail size={17} />
             <span>Let's talk</span>
           </button>
+        </div>
+        <div className="hero-proof" aria-label="Portfolio proof points">
+          {heroProof.map((item) => (
+            <div key={item.label}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </div>
+          ))}
         </div>
       </div>
       <HeroVisual />
@@ -1076,6 +1230,34 @@ function Marquee() {
   );
 }
 
+function BuilderSection() {
+  return (
+    <section className="section builder-section" id="builder">
+      <div className="builder-intro" data-reveal>
+        <p className="section-label">Built by Santiago</p>
+        <h2>Lead, design, build, ship.</h2>
+        <p>
+          The portfolio is part of the proof. I built this site and my newest product
+          work with Codex, using the same loop I bring to teams: clarify the problem,
+          shape the system, make it real, and keep learning after launch.
+        </p>
+      </div>
+      <div className="builder-loop" data-reveal aria-label="Builder process">
+        {builderProof.map((item, index) => (
+          <article key={item.step}>
+            <span className="pixel-step">{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <p>{item.step}</p>
+              <h3>{item.title}</h3>
+              <span>{item.detail}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Work({ filters, filter, setFilter, projects, projectView, setProjectView, openProject }) {
   return (
     <section className="section work-section" id="work">
@@ -1096,6 +1278,16 @@ function Work({ filters, filter, setFilter, projects, projectView, setProjectVie
             </button>
           ))}
         </div>
+      </div>
+
+      <div className="hiring-paths" data-reveal aria-label="Hiring paths through selected work">
+        {hiringPaths.map((path) => (
+          <article key={path.title}>
+            <span>{path.match}</span>
+            <h3>{path.title}</h3>
+            <p>{path.detail}</p>
+          </article>
+        ))}
       </div>
 
       <div className="view-toggle" aria-label="Project view">
@@ -1138,6 +1330,7 @@ function ProjectList({ projects, openProject }) {
           <strong>{project.title}</strong>
           <p>{project.summary}</p>
           <small>{project.category} / {project.year}</small>
+          <ProjectBadges badges={project.badges} compact />
           <ArrowUpRight size={18} />
         </button>
       ))}
@@ -1162,6 +1355,7 @@ function ProjectCard({ project, index, openProject }) {
             </p>
             <h3>{project.title}</h3>
           </div>
+          <ProjectBadges badges={project.badges} compact />
           <p>{project.summary}</p>
           <div className="project-footer">
             <span>{project.type}</span>
@@ -1174,6 +1368,14 @@ function ProjectCard({ project, index, openProject }) {
 }
 
 function ProjectVisual({ project }) {
+  if (project.caseVisual) {
+    return (
+      <div className="project-visual has-case-visual">
+        <WexCaseVisual visual={project.caseVisual} />
+      </div>
+    );
+  }
+
   if (project.previewImage) {
     const visualClassName = ["project-visual", "has-product-image"];
 
@@ -1217,6 +1419,39 @@ function ProjectVisual({ project }) {
         <div className="phone-line" />
         <div className="phone-line short" />
       </div>
+    </div>
+  );
+}
+
+function WexCaseVisual({ visual }) {
+  return (
+    <div className="case-visual">
+      <div className="case-visual-header">
+        <span>{visual.label}</span>
+        <strong>{visual.metric}</strong>
+        <p>{visual.metricLabel}</p>
+      </div>
+      <div className="case-map">
+        {visual.nodes.map((node, index) => (
+          <div className="case-node" key={node} style={{ "--node-index": index }}>
+            <span />
+            <p>{node}</p>
+          </div>
+        ))}
+      </div>
+      <small>{visual.footer}</small>
+    </div>
+  );
+}
+
+function ProjectBadges({ badges, compact = false }) {
+  if (!badges?.length) return null;
+
+  return (
+    <div className={compact ? "badge-row is-compact" : "badge-row"} aria-label="Project badges">
+      {badges.map((badge) => (
+        <span key={badge}>{badge}</span>
+      ))}
     </div>
   );
 }
@@ -1325,6 +1560,41 @@ function ProfileSection() {
             <span>{item}</span>
           </p>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function PortfolioSnapshot({ openContact }) {
+  return (
+    <section className="section snapshot-section" id="snapshot">
+      <div className="snapshot-panel" data-reveal>
+        <div className="snapshot-copy">
+          <p className="section-label">Portfolio snapshot</p>
+          <h2>Product leader with the range to make the idea real.</h2>
+        </div>
+        <div className="snapshot-grid">
+          {portfolioSnapshot.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="snapshot-actions">
+          <a className="pill-button light" href="#work">
+            <ArrowDown size={17} />
+            <span>View selected work</span>
+          </a>
+          <a className="pill-button ghost" href={profile.linkedin} target="_blank" rel="noreferrer">
+            <Linkedin size={17} />
+            <span>LinkedIn</span>
+          </a>
+          <button className="pill-button ghost" type="button" onClick={openContact}>
+            <Mail size={17} />
+            <span>Let's talk</span>
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -1520,6 +1790,7 @@ function ProjectModal({ project, close, previous, next }) {
                 <span>View this project</span>
               </a>
             )}
+            <ProjectBadges badges={project.badges} />
           </div>
           <ProjectVisual project={project} />
         </div>
@@ -1537,6 +1808,8 @@ function ProjectModal({ project, close, previous, next }) {
         </div>
 
         <ProjectDeviceShowcase project={project} />
+
+        <BuilderNotes project={project} />
 
         <section className="process-panel">
           <div>
@@ -1605,6 +1878,27 @@ function CaseBlock({ title, text }) {
     <section className="case-block">
       <h3>{title}</h3>
       <p>{text}</p>
+    </section>
+  );
+}
+
+function BuilderNotes({ project }) {
+  if (!project.builderNotes?.length) return null;
+
+  return (
+    <section className="builder-notes">
+      <div>
+        <p className="section-label">Builder notes</p>
+        <h3>What I personally made and learned</h3>
+      </div>
+      <div className="builder-note-list">
+        {project.builderNotes.map((note, index) => (
+          <p key={note}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            {note}
+          </p>
+        ))}
+      </div>
     </section>
   );
 }
