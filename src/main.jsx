@@ -119,6 +119,8 @@ const projects = [
     category: "WEX",
     accent: "orange",
     platform: ["Web", "Mobile iOS", "Prototype"],
+    previewImage: "/project-images/placeholders/wex-finance-systems.svg",
+    previewAlt: "Abstract product system visual for billing, statements, transactions, and payments",
     summary:
       "A redesign of high-traffic financial workflows across billing, statements, transactions, and payments, focused on clarity, support reduction, and retention.",
     role: "Product Design Director",
@@ -158,6 +160,8 @@ const projects = [
     category: "WEX",
     accent: "rose",
     platform: ["Web", "Mobile iOS", "OpenAI API"],
+    previewImage: "/project-images/placeholders/wexpert-ai-flow.svg",
+    previewAlt: "Abstract conversational AI product visual",
     summary:
       "A conversational AI experience that helps small businesses find personalized WEX product recommendations without rigid forms.",
     role: "Lead UX Designer",
@@ -197,6 +201,8 @@ const projects = [
     category: "WEX",
     accent: "cyan",
     platform: ["Web", "Mobile iOS", "Maze"],
+    previewImage: "/project-images/placeholders/purchase-controls-flow.svg",
+    previewAlt: "Abstract workflow visual for purchase controls",
     summary:
       "A redesign of complex purchase-control experiences that helped customers manage card behavior with more clarity, confidence, and adoption.",
     role: "Lead UX Designer",
@@ -1368,14 +1374,6 @@ function ProjectCard({ project, index, openProject }) {
 }
 
 function ProjectVisual({ project }) {
-  if (project.caseVisual) {
-    return (
-      <div className="project-visual has-case-visual">
-        <WexCaseVisual visual={project.caseVisual} />
-      </div>
-    );
-  }
-
   if (project.previewImage) {
     const visualClassName = ["project-visual", "has-product-image"];
 
@@ -1386,6 +1384,14 @@ function ProjectVisual({ project }) {
     return (
       <div className={visualClassName.join(" ")}>
         <img src={project.previewImage} alt={project.previewAlt || `${project.title} product preview`} loading="lazy" />
+      </div>
+    );
+  }
+
+  if (project.caseVisual) {
+    return (
+      <div className="project-visual has-case-visual">
+        <WexCaseVisual visual={project.caseVisual} />
       </div>
     );
   }
