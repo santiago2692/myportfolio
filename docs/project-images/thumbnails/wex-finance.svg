@@ -1,0 +1,18 @@
+<svg width="1400" height="980" viewBox="0 0 1400 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="980" fill="#110F0D"/>
+  <circle cx="1088" cy="148" r="390" fill="#F97316" opacity=".18"/>
+  <circle cx="250" cy="840" r="320" fill="#8B5CF6" opacity=".1"/>
+  <path d="M150 710C330 610 500 588 676 640C874 698 1012 600 1248 374" stroke="#F97316" stroke-width="3" opacity=".36"/>
+  <g filter="url(#s)">
+    <rect x="180" y="195" width="420" height="285" rx="34" fill="#18171A" stroke="#fff" stroke-opacity=".1"/>
+    <rect x="760" y="155" width="430" height="620" rx="42" fill="#151519" stroke="#fff" stroke-opacity=".1"/>
+    <rect x="270" y="556" width="474" height="260" rx="34" fill="#17161A" stroke="#fff" stroke-opacity=".1"/>
+    <rect x="230" y="250" width="160" height="92" rx="22" fill="#F97316" opacity=".2"/>
+    <rect x="820" y="225" width="120" height="120" rx="28" fill="#F97316" opacity=".22"/>
+    <rect x="820" y="440" width="300" height="26" rx="13" fill="#fff" opacity=".12"/>
+    <rect x="820" y="510" width="230" height="26" rx="13" fill="#fff" opacity=".08"/>
+    <rect x="336" y="632" width="110" height="110" rx="28" fill="#F59E0B" opacity=".18"/>
+    <circle cx="670" cy="686" r="58" fill="#F97316" opacity=".2"/>
+  </g>
+  <defs><filter id="s" x="100" y="75" width="1170" height="820" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#000" flood-opacity=".42"/></filter></defs>
+</svg>

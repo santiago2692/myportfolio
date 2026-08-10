@@ -1,0 +1,16 @@
+<svg width="1400" height="980" viewBox="0 0 1400 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="980" fill="#0D1208"/>
+  <circle cx="1120" cy="160" r="360" fill="#84CC16" opacity=".16"/>
+  <circle cx="260" cy="800" r="330" fill="#10B981" opacity=".12"/>
+  <path d="M128 760C350 592 548 616 738 688C910 753 1082 690 1268 560V980H128V760Z" fill="#84CC16" opacity=".14"/>
+  <g filter="url(#s)">
+    <rect x="320" y="255" width="260" height="360" rx="36" fill="#143019" stroke="#D4AF37" stroke-opacity=".65" transform="rotate(-13 320 255)"/>
+    <rect x="500" y="232" width="260" height="360" rx="36" fill="#17381D" stroke="#D4AF37" stroke-opacity=".65" transform="rotate(-4 500 232)"/>
+    <rect x="680" y="250" width="260" height="360" rx="36" fill="#102C17" stroke="#D4AF37" stroke-opacity=".65" transform="rotate(9 680 250)"/>
+    <circle cx="760" cy="462" r="92" fill="#fff" opacity=".9"/>
+    <circle cx="734" cy="438" r="12" fill="#0D1208" opacity=".35"/>
+    <circle cx="780" cy="492" r="10" fill="#0D1208" opacity=".25"/>
+    <rect x="710" y="392" width="118" height="50" rx="14" fill="#84CC16" opacity=".72" transform="rotate(-10 710 392)"/>
+  </g>
+  <defs><filter id="s" x="180" y="90" width="900" height="700" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#000" flood-opacity=".42"/></filter></defs>
+</svg>

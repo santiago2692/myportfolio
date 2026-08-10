@@ -1,0 +1,18 @@
+<svg width="1400" height="980" viewBox="0 0 1400 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="980" fill="#0D0D12"/>
+  <circle cx="1090" cy="150" r="390" fill="#8B5CF6" opacity=".18"/>
+  <circle cx="240" cy="820" r="330" fill="#10B981" opacity=".12"/>
+  <path d="M170 706C340 574 514 538 692 598C864 655 1030 588 1214 388" stroke="#8B5CF6" stroke-width="3" opacity=".32"/>
+  <g filter="url(#s)">
+    <path d="M210 562L450 430L690 562L450 694L210 562Z" fill="#17171C" stroke="#fff" stroke-opacity=".12"/>
+    <path d="M530 378L760 250L1040 410L810 538L530 378Z" fill="#181820" stroke="#fff" stroke-opacity=".12"/>
+    <path d="M640 644L890 508L1190 682L940 818L640 644Z" fill="#14151A" stroke="#fff" stroke-opacity=".12"/>
+    <rect x="380" y="424" width="140" height="160" rx="20" fill="#8B5CF6" opacity=".28" transform="rotate(30 380 424)"/>
+    <rect x="742" y="306" width="150" height="188" rx="22" fill="#10B981" opacity=".24" transform="rotate(30 742 306)"/>
+    <rect x="914" y="604" width="144" height="168" rx="22" fill="#F59E0B" opacity=".24" transform="rotate(30 914 604)"/>
+    <circle cx="452" cy="560" r="32" fill="#fff" opacity=".16"/>
+    <circle cx="812" cy="402" r="32" fill="#fff" opacity=".14"/>
+    <circle cx="986" cy="690" r="32" fill="#fff" opacity=".14"/>
+  </g>
+  <defs><filter id="s" x="120" y="160" width="1160" height="750" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#000" flood-opacity=".42"/></filter></defs>
+</svg>
