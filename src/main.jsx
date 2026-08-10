@@ -21,13 +21,13 @@ import "./styles.css";
 
 const profile = {
   name: "Santiago Pirez Velasco",
-  title: "Senior Director E2E Product Experiences & Design for North America Mobility",
-  location: "United States",
+  title: "Senior Director, Product & Design",
+  location: "Maine",
   email: "santiagopirezvelasco@gmail.com",
   linkedin: "https://www.linkedin.com/in/santiago-pirez-22980b7a/",
   site: "https://www.santiagopirezvelasco.com/",
   intro:
-    "I lead product and design across North America Mobility at WEX, shaping end-to-end experiences that connect customer needs with business outcomes. Outside work, I build my own products with Tiger Mind Labs and Codex."
+    "I lead North American product and design strategy at WEX, shaping experiences for 500K+ monthly customers across fintech, payments, mobility, and SaaS. Outside work, I build my own products with Tiger Mind Labs and Codex."
 };
 
 const projects = [
@@ -99,32 +99,32 @@ const projects = [
   },
   {
     id: "statements-transactions-payments",
-    title: "Statements, Transactions & Payments",
+    title: "Billing, Statements, Transactions & Payments",
     year: "2025",
     type: "Enterprise UX initiative",
     category: "WEX",
     accent: "orange",
     platform: ["Web", "Mobile iOS", "Prototype"],
     summary:
-      "A proactive redesign of core financial workflows that carried high support volume, attrition risk, and inconsistent customer logic.",
-    role: "Lead UX Designer",
+      "A redesign of high-traffic financial workflows across billing, statements, transactions, and payments, focused on clarity, support reduction, and retention.",
+    role: "Product Design Director",
     timeline: "Ongoing",
     challenge:
-      "Transactions, statements, and payment flows were among the most-used surfaces but had fragmented formats, unclear state, and no single roadmap owner.",
+      "Billing, transactions, statements, and payment flows served a large customer base but had fragmented formats, unclear state, and high customer-service pressure.",
     solution:
-      "I mapped the current experience, interviewed customer-facing teams, prioritized by business risk, and built a text-to-code prototype to make the ideal flow testable.",
+      "I connected product, design, research, analytics, customer service, and commercial priorities to focus investment on the experiences with the highest customer and business impact.",
     process: [
-      "Audited the existing statements, transactions, and payments experience across high-volume workflows",
-      "Interviewed internal teams to identify support pain, attrition risk, and inconsistent customer logic",
-      "Built a prototype that made the future workflow concrete enough for testing, training, and alignment"
+      "Audited billing, statements, transactions, and payments across high-volume customer workflows",
+      "Partnered with Product, Engineering, Data, Operations, Commercial, and Customer Service to connect UX decisions to measurable outcomes",
+      "Used research, analytics, and prototyping to make the future workflow concrete enough for roadmap alignment"
     ],
-    skills: ["Enterprise UX", "Service mapping", "Research synthesis", "Executive alignment"],
+    skills: ["Product strategy", "Enterprise UX", "Service mapping", "Executive alignment"],
     outcomes: [
-      "Internal teams reported a 100% confidence score in the redesigned flow",
-      "The prototype became useful for new-hire training and cross-functional alignment",
-      "Customer tests completed all tasks without guidance or confusion"
+      "Focused product, design, and research investment on the highest-traffic customer experiences",
+      "Contributed to a 20% reduction in customer service calls while improving retention and NPS",
+      "Connected roadmap decisions to adoption, retention, customer satisfaction, and commercial outcomes"
     ],
-    metrics: ["100% confidence", "Core UX debt", "Text-to-code prototype"],
+    metrics: ["500K+ monthly customers", "20% fewer service calls", "Retention + NPS"],
     featured: true
   },
   {
@@ -166,11 +166,11 @@ const projects = [
     accent: "cyan",
     platform: ["Web", "Mobile iOS", "Maze"],
     summary:
-      "A redesign of a complex six-step purchase control flow to improve clarity, card assignment confidence, and task completion.",
+      "A redesign of complex purchase-control experiences that helped customers manage card behavior with more clarity, confidence, and adoption.",
     role: "Lead UX Designer",
     timeline: "24 weeks",
     challenge:
-      "Users faced a heavy six-step process with weak personalization, disconnected card assignments, and uncertain completion language.",
+      "Customers faced a heavy control setup process with weak personalization, disconnected card assignments, and uncertain completion language.",
     solution:
       "I tested an ideal one-step flow, introduced visual card assignments, simplified alerts, and then adapted the design for delivery constraints.",
     process: [
@@ -180,11 +180,11 @@ const projects = [
     ],
     skills: ["Workflow simplification", "Maze testing", "Fleet UX", "Interaction design"],
     outcomes: [
+      "Contributed to a 25% YoY increase in adoption across Billing and Purchase Controls work",
       "User testing showed a 35% increase in task completion",
-      "Card assignment clarity became visible directly in the flow",
-      "The work established a foundation for future purchase-control iterations"
+      "Card assignment clarity became visible directly in the flow"
     ],
-    metrics: ["+35% task completion", "24 weeks", "Fleet controls"],
+    metrics: ["25% YoY adoption", "+35% task completion", "Fleet controls"],
     featured: true
   },
   {
@@ -682,32 +682,32 @@ const projectDeviceShowcases = {
 
 const experience = [
   {
-    title: "Senior Director E2E Product Experiences & Design for North America Mobility",
+    title: "Senior Director, E2E Product Experiences & Design - North America",
     company: "WEX",
     dates: "Mar 2026 - Present",
     detail:
-      "Leading Product & Design across North America Mobility for WEX."
+      "Leading product and design strategy across WEX's North American fleet portfolio, shaping customer experience, portfolio priorities, and growth opportunities for products serving 500K+ monthly customers."
   },
   {
     title: "Product Design Director",
     company: "WEX",
     dates: "Jul 2025 - Mar 2026",
     detail:
-      "Directed product design work across mobility experiences, connecting UX strategy with product outcomes."
+      "Led a 15-person design and research organization across 8-12 fleet and payments initiatives, focusing investment on high-traffic experiences and contributing to lower service volume, stronger retention, and better NPS."
   },
   {
     title: "Senior UX Designer",
     company: "WEX",
     dates: "Mar 2021 - Jul 2025",
     detail:
-      "Helped scale design practice, systems, research partnership, and cross-functional product strategy."
+      "Led UX strategy and execution across North American fleet and payment products, scaled a unified design system, and established research practices that improved quality and decision-making."
   },
   {
     title: "UX Designer",
     company: "WEX",
-    dates: "Feb 2018 - Mar 2021",
+    dates: "2018 - 2021",
     detail:
-      "Joined as the third designer on a small UX team and helped prove the value of design across the business."
+      "Designed end-to-end experiences across North American mobility and over-the-road products, using field research, usability testing, and customer interviews to influence product roadmaps."
   },
   {
     title: "Co-Founder",
@@ -717,26 +717,33 @@ const experience = [
       "Building side products, experiments, and product worlds across sports, planning, fitness, and local discovery."
   },
   {
-    title: "Visual Designer Jr",
-    company: "Karma Pulse",
+    title: "UI/UX Designer",
+    company: "KarmaPulse",
     dates: "2016 - 2018",
     detail:
-      "Built early UI/UX foundations in a startup environment across social, product, and brand work."
+      "Designed AI-powered analytics products for Spanish-language social sentiment and created a modular design system that accelerated feature delivery."
+  },
+  {
+    title: "Designer & Brand Manager",
+    company: "Deezer Mexico / 100 Montaditos Mexico",
+    dates: "2013 - 2016",
+    detail:
+      "Built early foundations across brand, content, and digital design before moving deeper into product and UX."
   }
 ];
 
 const education = [
-  "Master in Direction and Engineering of Web Page - Universidad Internacional de La Rioja",
-  "Bachelor's Degree in Web Design and Development - Universidad Iberoamericana, Ciudad de Mexico",
+  "Master's Degree, Web Design & Engineering - Universidad Internacional de La Rioja (UNIR)",
+  "B.A. / Bachelor's Degree, Interactive Design - Universidad Iberoamericana",
   "Professional Diploma in UX Design - UX Design Institute",
-  "Business Strategy - McKinsey & Company"
+  "Languages - English (Native), Spanish (Native), French (Intermediate)"
 ];
 
 const waysOfWorking = [
   {
-    title: "End-to-end product thinking",
-    detail: "I connect customer needs, product strategy, business outcomes, and the quality of the shipped experience.",
-    tools: ["Research", "Figma", "Notion"]
+    title: "Portfolio-level product thinking",
+    detail: "I connect customer needs, portfolio strategy, product roadmaps, OKRs, and commercial priorities to the quality of the shipped experience.",
+    tools: ["Roadmaps", "OKRs", "Research"]
   },
   {
     title: "Minimal systems",
@@ -744,27 +751,27 @@ const waysOfWorking = [
     tools: ["Design systems", "Figma", "Framer"]
   },
   {
-    title: "Hands-on leadership",
-    detail: "I can lead the room, shape the roadmap, make the prototype, critique the details, and help the team ship.",
-    tools: ["Strategy", "Critique", "Docs"]
+    title: "Scaled team leadership",
+    detail: "I build product and design leaders, create operating models, and help multidisciplinary teams move with ownership and decision velocity.",
+    tools: ["Team building", "Critique", "Jira"]
   },
   {
     title: "Builder range",
-    detail: "Codex, React, Figma, and AI tools let me move from idea to working product without waiting for permission.",
-    tools: ["Codex", "React", "OpenAI"]
+    detail: "Codex, React, Figma, and AI tools let me move from insight to prototype to working product without waiting for permission.",
+    tools: ["Codex", "React", "ChatGPT"]
   }
 ];
 
 const toolbox = [
   { name: "Codex", detail: "AI pair builder for shipping React apps, prototypes, and product experiments.", icon: Wand2 },
   { name: "Figma", detail: "Design systems, UX flows, prototypes, and cross-functional critique.", icon: Figma },
-  { name: "OpenAI", detail: "AI concepting and product experiences such as WEXpert.", icon: BrainCircuit },
+  { name: "ChatGPT", detail: "AI concepting, synthesis, and product experiences such as WEXpert.", icon: BrainCircuit },
   { name: "React", detail: "Production-ready frontends and interactive prototypes.", icon: Code2 },
-  { name: "Framer", detail: "Motion-rich portfolio and product storytelling.", icon: MousePointer2 },
-  { name: "Notion", detail: "Planning, documentation, launch notes, and team clarity.", icon: Layers3 }
+  { name: "Jira", detail: "Roadmaps, delivery visibility, and product operating model rhythms.", icon: MousePointer2 },
+  { name: "Analytics", detail: "Adoption, conversion, retention, satisfaction, OKRs, and KPI-backed decisions.", icon: Layers3 }
 ];
 
-const productSignals = ["Tiger Mind Labs", "Milo", "Cards of Chaos", "PaceChase", "Hackers Golf", "BoxFox", "WEXpert"];
+const productSignals = ["500K+ monthly customers", "15+ person org", "8-12 initiatives", "Tiger Mind Labs", "Milo", "Cards of Chaos", "WEXpert"];
 
 const navItems = [
   ["Work", "#work"],
@@ -1224,13 +1231,13 @@ function ProfileSection() {
         </h2>
         <div className="body-copy">
           <p>
-            Product and Design leader focused on shaping end-to-end experiences that connect
-            customer needs with business outcomes.
+            Senior Product and Design leader focused on shaping end-to-end experiences that
+            connect customer needs, product strategy, data, and commercial priorities.
           </p>
           <p>
-            With a foundation in UX and over 10 years of experience, I have evolved from
-            hands-on design into leadership across product experience, systems, strategy, and
-            team development.
+            With 10+ years across fintech, payments, mobility, SaaS, and AI-powered products,
+            I have evolved from hands-on UX into leadership across portfolio strategy, operating
+            models, design systems, research, and team development.
           </p>
           <p>
             Outside WEX, Tiger Mind Labs is my creative playground with Kyle. The newer work
@@ -1248,19 +1255,20 @@ function ProfileSection() {
         </div>
       </div>
       <div className="stats-grid" data-reveal>
-        <Stat value="40+" label="UX org grown at WEX" />
-        <Stat value="8+" label="Designers managed" />
-        <Stat value="12" label="Mobility products led" />
-        <Stat value="10+" label="Portfolio products" />
+        <Stat value="500K+" label="Monthly customers served" />
+        <Stat value="15+" label="Product, design, and research org" />
+        <Stat value="8-12" label="Concurrent initiatives led" />
+        <Stat value="40%" label="Design and dev time reduced" />
       </div>
       <div className="profile-system" data-reveal>
         <div className="profile-system-copy">
           <p className="section-label">Operating system</p>
           <h3>How the work gets made</h3>
           <p>
-            My profile is a mix of product leadership, quiet visual taste, systems thinking, and
-            hands-on building. The tools are not a separate stack; they are how I explore,
-            align teams, prototype decisions, and ship my own products.
+            My profile is a mix of product leadership, quiet visual taste, systems thinking,
+            data-backed decision-making, and hands-on building. The tools are not a separate
+            stack; they are how I discover opportunities, align teams, prototype decisions,
+            measure outcomes, and ship my own products.
           </p>
           <div className="tool-strip" aria-label="Tools in practice">
             {toolbox.map(({ name, icon: Icon }) => (
