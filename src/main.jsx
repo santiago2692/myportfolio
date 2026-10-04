@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowDown,
@@ -18,6 +18,8 @@ import {
   X
 } from "lucide-react";
 import "./styles.css";
+import "./refresh.css";
+import { beagleBounce, releaseUpdates } from "./releases";
 
 const profile = {
   name: "Santiago Pirez Velasco",
@@ -30,7 +32,7 @@ const profile = {
     "I lead North American product and design strategy at WEX, shaping experiences for 500K+ monthly customers across fintech, payments, mobility, and SaaS. Outside work, I build my own products with Tiger Mind Labs and Codex."
 };
 
-const projects = [
+const originalProjects = [
   {
     id: "tml",
     title: "Tiger Mind Labs",
@@ -465,6 +467,11 @@ const projects = [
   }
 ];
 
+const projects = [...originalProjects.map((project) => ({ ...project, ...releaseUpdates[project.id] })), beagleBounce];
+const featuredIds = ["statements-transactions-payments", "milo", "cards-of-chaos"];
+const featuredProjects = featuredIds.map((id) => projects.find((project) => project.id === id));
+const projectFromLocation = () => projects.find((project) => window.location.hash === `#project/${project.id}`) || null;
+
 const projectDetailVisuals = {
   tml: [
     {
@@ -856,10 +863,10 @@ const toolbox = [
 const productSignals = ["500K+ monthly customers", "15+ person org", "8-12 initiatives", "Tiger Mind Labs", "Milo", "Cards of Chaos", "WEXpert"];
 
 const heroProof = [
-  { value: "500K+", label: "customers in product scope" },
-  { value: "15+", label: "product, design, research org" },
-  { value: "8-12", label: "initiatives led in parallel" },
-  { value: "Codex", label: "self-built portfolio and products" }
+  { value: "500K+", label: "monthly customers in scope" },
+  { value: "15+", label: "people in the organization" },
+  { value: "8-12", label: "parallel initiatives" },
+  { value: "Codex", label: "hands-on product building" }
 ];
 
 const builderProof = [
@@ -976,13 +983,23 @@ function useReveal() {
 }
 
 function App() {
-  const [activeProject, setActiveProject] = useState(null);
+  const [activeProject, setActiveProject] = useState(projectFromLocation);
   const [contactOpen, setContactOpen] = useState(false);
   const [filter, setFilter] = useState("All");
   const [projectView, setProjectView] = useState("cards");
   const [menuOpen, setMenuOpen] = useState(false);
 
   useReveal();
+
+  useEffect(() => {
+    const syncProject = () => setActiveProject(projectFromLocation());
+    window.addEventListener("hashchange", syncProject);
+    return () => window.removeEventListener("hashchange", syncProject);
+  }, []);
+
+  useEffect(() => {
+    document.title = activeProject ? `${activeProject.title} | Santiago Pirez Velasco` : "Santiago Pirez Velasco - Senior Product & Design Leader";
+  }, [activeProject]);
 
   useEffect(() => {
     document.body.style.overflow = activeProject || contactOpen ? "hidden" : "";
@@ -992,30 +1009,33 @@ function App() {
   }, [activeProject, contactOpen]);
 
   const filters = useMemo(
-    () => ["All", "WEX", "Built with Codex", "Tiger Mind Labs"],
+    () => ["All", "Leadership", "Products", "Client work"],
     []
   );
 
   const visibleProjects = useMemo(() => {
-    if (filter === "All") return projects;
-    if (filter === "Tiger Mind Labs") {
-      return projects.filter(
-        (project) =>
-          project.category === "Tiger Mind Labs" || project.category === "Built with Codex"
-      );
-    }
-    return projects.filter((project) => project.category === filter);
+    const ordered = [...projects.filter((project) => project.id !== "tml"), projects.find((project) => project.id === "tml")];
+    if (filter === "All") return ordered;
+    const paths = { Leadership: "Leadership case studies", Products: "Self-built products", "Client work": "Client / brand work" };
+    return ordered.filter((project) => project.hiringPath === paths[filter]);
   }, [filter]);
 
   const selectedIndex = activeProject
     ? projects.findIndex((project) => project.id === activeProject.id)
     : -1;
 
-  const openProject = (project) => setActiveProject(project);
+  const openProject = (project) => {
+    window.location.hash = `project/${project.id}`;
+    setActiveProject(project);
+  };
+  const closeProject = () => {
+    history.replaceState(null, "", "#work");
+    setActiveProject(null);
+  };
 
   const goToProject = (direction) => {
     const nextIndex = (selectedIndex + direction + projects.length) % projects.length;
-    setActiveProject(projects[nextIndex]);
+    openProject(projects[nextIndex]);
   };
 
   return (
@@ -1040,14 +1060,14 @@ function App() {
           openProject={openProject}
         />
         <ProfileSection />
-        <PortfolioSnapshot openContact={() => setContactOpen(true)} />
         <Contact openContact={() => setContactOpen(true)} />
       </main>
       <Footer />
       {activeProject ? (
         <ProjectModal
+          key={activeProject.id}
           project={activeProject}
-          close={() => setActiveProject(null)}
+          close={closeProject}
           previous={() => goToProject(-1)}
           next={() => goToProject(1)}
         />
@@ -1121,6 +1141,9 @@ function Hero({ openContact }) {
             <Mail size={17} />
             <span>Let's talk</span>
           </button>
+          <a className="pill-button ghost" href="/resume/santiago-pirez-velasco.pdf" download>
+            <ArrowDown size={17} /><span>Resume</span>
+          </a>
         </div>
         <div className="hero-proof" aria-label="Portfolio proof points">
           {heroProof.map((item) => (
@@ -1241,9 +1264,8 @@ function BuilderSection() {
         <p className="section-label">Built by Santiago</p>
         <h2>Lead, design, build, ship.</h2>
         <p>
-          The portfolio is part of the proof. I built this site and my newest product
-          work with Codex, using the same loop I bring to teams: clarify the problem,
-          shape the system, make it real, and keep learning after launch.
+          I built this portfolio and my latest products with Codex.
+          I own the product decisions, design, and the work of getting them into people's hands.
         </p>
       </div>
       <div className="builder-loop" data-reveal aria-label="Builder process">
@@ -1252,8 +1274,7 @@ function BuilderSection() {
             <span className="pixel-step">{String(index + 1).padStart(2, "0")}</span>
             <div>
               <p>{item.step}</p>
-              <h3>{item.title}</h3>
-              <span>{item.detail}</span>
+              <span>{item.title}</span>
             </div>
           </article>
         ))}
@@ -1268,14 +1289,21 @@ function Work({ filters, filter, setFilter, projects, projectView, setProjectVie
       <div className="section-heading" data-reveal>
         <div>
           <p className="section-label">Selected work</p>
-          <h2>Featured projects</h2>
+          <h2>Leadership meets making.</h2>
         </div>
+      </div>
+      <div className="featured-work" aria-label="Featured case studies">
+        {featuredProjects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} openProject={openProject} />)}
+      </div>
+      <div className="collection-heading">
+        <div><p className="section-label">The full collection</p><h3>Explore the work</h3></div>
         <div className="filter-row" aria-label="Project filters">
           {filters.map((item) => (
             <button
               key={item}
               className={item === filter ? "filter is-active" : "filter"}
               type="button"
+              aria-pressed={item === filter}
               onClick={() => setFilter(item)}
             >
               {item}
@@ -1284,22 +1312,14 @@ function Work({ filters, filter, setFilter, projects, projectView, setProjectVie
         </div>
       </div>
 
-      <div className="hiring-paths" data-reveal aria-label="Hiring paths through selected work">
-        {hiringPaths.map((path) => (
-          <article key={path.title}>
-            <span>{path.match}</span>
-            <h3>{path.title}</h3>
-            <p>{path.detail}</p>
-          </article>
-        ))}
-      </div>
-
       <div className="view-toggle" aria-label="Project view">
+        <span className="collection-count" aria-live="polite">{projects.length} projects</span>
         {["cards", "list"].map((view) => (
           <button
             key={view}
             className={projectView === view ? "is-active" : ""}
             type="button"
+            aria-pressed={projectView === view}
             onClick={() => setProjectView(view)}
           >
             {view === "cards" ? "Card view" : "List view"}
@@ -1372,6 +1392,9 @@ function ProjectCard({ project, index, openProject }) {
 }
 
 function ProjectVisual({ project }) {
+  if (project.screenshot) {
+    return <div className="product-screen-preview"><img src={project.screenshot} alt={`${project.title} actual app screen`} loading="lazy" /></div>;
+  }
   if (project.previewImage) {
     const visualClassName = ["project-visual", "has-product-image"];
 
@@ -1485,30 +1508,15 @@ function ProfileSection() {
             product much faster.
           </p>
         </div>
-        <div className="profile-output">
-          <span>Recent product worlds</span>
-          <div>
-            {productSignals.map((item) => (
-              <em key={item}>{item}</em>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="stats-grid" data-reveal>
-        <Stat value="500K+" label="Monthly customers served" />
-        <Stat value="15+" label="Product, design, and research org" />
-        <Stat value="8-12" label="Concurrent initiatives led" />
-        <Stat value="40%" label="Design and dev time reduced" />
+        <a className="pill-button ghost" href="/resume/santiago-pirez-velasco.pdf" download><ArrowDown size={17} />Download resume</a>
       </div>
       <div className="profile-system" data-reveal>
         <div className="profile-system-copy">
           <p className="section-label">Operating system</p>
           <h3>How the work gets made</h3>
           <p>
-            My profile is a mix of product leadership, quiet visual taste, systems thinking,
-            data-backed decision-making, and hands-on building. The tools are not a separate
-            stack; they are how I discover opportunities, align teams, prototype decisions,
-            measure outcomes, and ship my own products.
+            Research and analytics shape the direction. Figma makes decisions tangible.
+            Codex and React help me turn those decisions into working products.
           </p>
           <div className="tool-strip" aria-label="Tools in practice">
             {toolbox.map(({ name, icon: Icon }) => (
@@ -1761,6 +1769,22 @@ function Footer() {
 }
 
 function ProjectModal({ project, close, previous, next }) {
+  const dialog = useRef(null);
+  const [copied, setCopied] = useState(false);
+  useEffect(() => {
+    const originalFocus = document.activeElement;
+    const element = dialog.current;
+    element.querySelector("button")?.focus();
+    const trap = (event) => {
+      if (event.key !== "Tab") return;
+      const items = [...element.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]')];
+      const first = items[0], last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    element.addEventListener("keydown", trap);
+    return () => { element.removeEventListener("keydown", trap); originalFocus?.focus(); };
+  }, []);
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key === "Escape") close();
@@ -1772,8 +1796,12 @@ function ProjectModal({ project, close, previous, next }) {
   }, [close, previous, next]);
 
   return (
-    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="project-title">
+    <div ref={dialog} className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="project-title">
       <div className="modal-header">
+        <button className="pill-button ghost" type="button" onClick={async () => {
+          try { await navigator.clipboard.writeText(window.location.href); setCopied(true); }
+          catch { setCopied(false); }
+        }}><ArrowUpRight size={17} /><span aria-live="polite">{copied ? "Link copied" : "Copy case study link"}</span></button>
         <button className="pill-button ghost" type="button" onClick={close}>
           <X size={17} />
           <span>Close</span>
@@ -1795,6 +1823,7 @@ function ProjectModal({ project, close, previous, next }) {
                 <span>View this project</span>
               </a>
             )}
+            <div className="store-links">{project.stores?.map(([label, url]) => <a key={label} className="pill-button ghost" href={url} target="_blank" rel="noopener noreferrer">{label}<ArrowUpRight size={16} /></a>)}</div>
             <ProjectBadges badges={project.badges} />
           </div>
           <ProjectVisual project={project} />
@@ -1812,7 +1841,9 @@ function ProjectModal({ project, close, previous, next }) {
           <CaseBlock title="How I focused the solution" text={project.solution} />
         </div>
 
-        <ProjectDeviceShowcase project={project} />
+        {project.category === "WEX" && <WorkflowEvidence project={project} />}
+        {project.id === "cards-of-chaos" ? <CardsWalkthrough /> : <ProjectDeviceShowcase project={project} />}
+        {project.journey && <section className="release-journey"><p className="section-label">From idea to release</p><h3>A plan became a shared place.</h3><div>{project.journey.map(([title, text], index) => <article key={title}><span className="pixel-step">0{index + 1}</span><h4>{title}</h4><p>{text}</p></article>)}</div><a href="https://apps.apple.com/us/app/milo-friendly-agenda/id6774718729" target="_blank" rel="noreferrer">Explore the release history <ArrowUpRight size={16} /></a></section>}
 
         <BuilderNotes project={project} />
 
@@ -1834,6 +1865,7 @@ function ProjectModal({ project, close, previous, next }) {
         <section className="outcomes">
           <p className="section-label">Impact</p>
           <h3>Outcomes and signals</h3>
+          {project.evidence && <p className="evidence-note">{project.evidence}</p>}
           <div className="outcome-grid">
             {project.outcomes.map((outcome) => (
               <div className="outcome" key={outcome}>
@@ -1909,6 +1941,12 @@ function BuilderNotes({ project }) {
 }
 
 function ProjectDeviceShowcase({ project }) {
+  if (project.gallery) {
+    return <section className="device-showcase"><DeviceSection variant="mobile" section={{ eyebrow: "Inside the mobile app", title: "From a date to a shared plan.", summary: project.solution, screens: project.gallery }} /></section>;
+  }
+  if (project.screenshot && project.id !== "cards-of-chaos") {
+    return <section className="release-screen-section"><div><p className="section-label">Inside the product</p><h3>{project.title}</h3><p>{project.solution}</p></div><img src={project.screenshot} alt={`${project.title} current product screen`} loading="lazy" /></section>;
+  }
   const showcase = projectDeviceShowcases[project.id];
 
   if (!showcase) return null;
@@ -1919,6 +1957,17 @@ function ProjectDeviceShowcase({ project }) {
       {showcase.web ? <DeviceSection variant="web" section={showcase.web} /> : null}
     </section>
   );
+}
+
+function WorkflowEvidence({ project }) {
+  const steps = project.caseVisual?.nodes || [];
+  return <section className="workflow-evidence"><p className="section-label">Conceptual workflow · not production UI</p><h3>{project.caseVisual?.label}</h3><ol>{steps.map((step, index) => <li key={step}><span>0{index + 1}</span><strong>{step}</strong>{index < steps.length - 1 && <ArrowRight size={20} aria-hidden="true" />}</li>)}</ol><p>{project.caseVisual?.footer}</p>{project.id === "purchase-controls" && <div className="workflow-comparison"><p><strong>Starting point</strong>Six-step setup with disconnected card assignments.</p><p><strong>Tested direction</strong>One-step concept with visible assignments, adapted for delivery constraints.</p></div>}</section>;
+}
+
+function CardsWalkthrough() {
+  const [step, setStep] = useState(0);
+  const screens = projectDeviceShowcases["cards-of-chaos"].mobile.screens;
+  return <section className="cards-walkthrough"><div><p className="section-label">A round in four moments</p><h3>Keep the group in the game.</h3><div className="walkthrough-tabs" role="tablist" aria-label="Cards of Chaos walkthrough">{screens.map((screen, index) => <button key={screen.title} type="button" role="tab" id={`round-tab-${index}`} aria-selected={step === index} aria-controls="round-screen" onClick={() => setStep(index)} onKeyDown={(event) => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.stopPropagation(); const next = (index + (event.key === "ArrowRight" ? 1 : -1) + screens.length) % screens.length; setStep(next); document.getElementById(`round-tab-${next}`)?.focus(); } }}><span>0{index + 1}</span>{screen.title}</button>)}</div><p>{screens[step].caption}</p></div><div id="round-screen" role="tabpanel" aria-labelledby={`round-tab-${step}`}><img src={screens[step].image} alt={screens[step].alt} loading="lazy" /></div></section>;
 }
 
 function DeviceSection({ section, variant }) {
