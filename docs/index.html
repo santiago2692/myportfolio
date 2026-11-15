@@ -1,35 +1,392 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio of Santiago Pirez Velasco, Senior Director of Product & Design, product strategy leader, UX leader, and Codex-powered product builder."
-    />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMW8FBCWQH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-RMW8FBCWQH");
-    </script>
-    <meta property="og:title" content="Santiago Pirez Velasco" />
-    <meta
-      property="og:description"
-      content="Product and design leadership, WEX case studies, and self-built Tiger Mind Labs products."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./portfolio-preview.svg" />
-    <meta name="theme-color" content="#09090b" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <title>Santiago Pirez Velasco - Senior Product & Design Leader</title>
-    <script type="module" crossorigin src="./assets/index-rAi3jicw.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BHS53iBR.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santiago Pirez Velasco · Product &amp; Design Leader</title>
+<meta name="description" content="Senior Director of Product &amp; Design at WEX. I lead product and design teams, and I still ship my own apps.">
+<link rel="canonical" href="https://santiagopirezvelasco.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santiago Pirez Velasco">
+<meta property="og:title" content="Santiago Pirez Velasco · Product &amp; Design Leader">
+<meta property="og:description" content="Senior Director of Product &amp; Design at WEX. I lead product and design teams, and I still ship my own apps.">
+<meta property="og:url" content="https://santiagopirezvelasco.com/">
+<meta property="og:image" content="https://santiagopirezvelasco.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6f5f2">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/spv.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMW8FBCWQH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-RMW8FBCWQH");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Inter+Tight:wght@500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0;background:#f6f5f2}
+a{color:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+.spv-nav__link{transition:color 200ms ease}
+.spv-nav__link[aria-current="location"]{color:#c2410c}
+.spv-nav__link[aria-current="location"]::after{transform:scaleX(1);transform-origin:left}
+
+.tl{list-style:none;margin:0;padding:0 0 0 36px;position:relative}
+.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:#d9d6cf;border-radius:2px}
+.tl::after{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:#c2410c;border-radius:2px;transform-origin:top;transform:scaleY(0);animation:tl-grow 1.4s cubic-bezier(0.22,1,0.36,1) .3s forwards}
+@supports (animation-timeline:view()){.tl::after{animation:tl-grow linear both;animation-timeline:view();animation-range:entry 10% cover 60%}}
+@keyframes tl-grow{to{transform:scaleY(1)}}
+.tl-item{position:relative;padding:0 0 32px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:#f6f5f2;border:2px solid #c2410c;box-sizing:border-box;z-index:1;transition:transform 260ms cubic-bezier(0.34,1.56,0.64,1)}
+.tl-now .tl-dot{background:#c2410c;animation:spv-pulse 2.2s ease-out infinite}
+.tl-item:hover .tl-dot{transform:scale(1.25)}
+.tl-item>div{transition:transform 260ms cubic-bezier(0.22,1,0.36,1)}
+.tl-item:hover>div{transform:translateX(6px)}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5e5b55;display:flex;align-items:center;gap:10px}
+.tl-badge{font-size:10px;letter-spacing:.08em;color:#ffffff;background:#c2410c;border-radius:999px;padding:3px 8px}
+@media (prefers-reduced-motion:reduce){.tl::after{animation:none;transform:none}.tl-now .tl-dot{animation:none}}
+
+@keyframes spv-pulse{0%{box-shadow:0 0 0 0 rgba(194,65,12,.45)}70%{box-shadow:0 0 0 10px rgba(194,65,12,0)}100%{box-shadow:0 0 0 0 rgba(194,65,12,0)}}
+.spv-live{width:8px;height:8px;border-radius:50%;background:#c2410c;display:inline-block;animation:spv-pulse 2.2s ease-out infinite}
+.spv-app__icon{width:64px;height:64px;display:block;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35));transition:transform 260ms cubic-bezier(0.34,1.56,0.64,1)}
+.spv-app:hover .spv-app__icon{transform:translateY(-3px) rotate(-4deg) scale(1.06)}
+.spv-card:hover .spv-wave,.ab-line:hover .spv-wave{animation:spv-wave 1.1s cubic-bezier(0.65,0,0.35,1)}
+.ab-word{transition:transform 260ms cubic-bezier(0.22,1,0.36,1),color 160ms}.ab-dot{color:#c2410c;display:inline-block;transition:transform 520ms cubic-bezier(0.34,1.56,0.64,1)}.ab-line:hover .ab-word{transform:translateX(10px)}.ab-line:hover .ab-dot{transform:translateY(-14px)}@media (max-width:760px){.ab-line{grid-template-columns:56px minmax(0,1fr)!important;gap:16px!important}.ab-line>span:last-child{grid-column:2}.ab-line .ic{width:52px;height:52px}}
+.ab-line:focus-visible{outline:2px solid #c2410c;border-radius:8px}
+.ic{width:64px;height:64px;overflow:visible;display:block}
+.ic *{transform-box:view-box}
+.ic-bulb .glass{transition:fill 160ms}
+.ic-bulb .fil{transition:stroke 200ms}
+.ic-bulb .glow{opacity:0;transform-origin:32px 27px;transform:scale(.5);transition:opacity 300ms cubic-bezier(0.22,1,0.36,1),transform 600ms cubic-bezier(0.34,1.56,0.64,1)}
+.ic-bulb .rays line{opacity:0;transform-origin:32px 27px;transform:scale(.6);transition:opacity 200ms ease-out,transform 420ms cubic-bezier(0.34,1.56,0.64,1)}
+@keyframes ic-flick{0%{fill:#fff}12%{fill:#ffe0b3}22%{fill:#fff}34%{fill:#ffe0b3}42%{fill:#fff8ee}55%,100%{fill:#ffd9a3}}
+.ic-ai .main{transform-origin:28px 34px;transition:transform 700ms cubic-bezier(0.34,1.56,0.64,1),fill 240ms}
+.ic-ai .s1,.ic-ai .s2,.ic-ai .s3{transform-box:fill-box;transform-origin:center;opacity:.35;transform:scale(.5);transition:opacity 240ms,transform 520ms cubic-bezier(0.34,1.56,0.64,1)}
+.ic-ai .s2{transition-delay:90ms}.ic-ai .s3{transition-delay:180ms}
+@keyframes ic-twinkle{from{transform:scale(1) rotate(0)}to{transform:scale(.7) rotate(45deg)}}
+.ic-walk .leg,.ic-walk .arm{transform-origin:30px 37px}
+.ic-walk .arm{transform-origin:31px 21px}
+.ic-walk .leg-f{transform:rotate(-14deg)}.ic-walk .leg-b{transform:rotate(14deg)}.ic-walk .arm-f{transform:rotate(12deg)}.ic-walk .arm-b{transform:rotate(-12deg)}
+@keyframes ic-swingA{from{transform:rotate(-26deg)}to{transform:rotate(26deg)}}
+@keyframes ic-swingB{from{transform:rotate(26deg)}to{transform:rotate(-26deg)}}
+@keyframes ic-bob{from{transform:translateY(0)}to{transform:translateY(-1.5px)}}
+@keyframes ic-ground{to{stroke-dashoffset:12}}
+.ic-family .adult{transform-origin:22px 60px;transition:transform 520ms cubic-bezier(0.34,1.56,0.64,1)}
+.ic-family .kid{transform-origin:45px 60px;transition:transform 520ms cubic-bezier(0.34,1.56,0.64,1)}
+.ic-family .arm{stroke-dasharray:30;stroke-dashoffset:30;transition:stroke-dashoffset 420ms cubic-bezier(0.22,1,0.36,1)}
+.ic-family .heart{opacity:0;transform-box:fill-box;transform-origin:center;transform:translateY(6px) scale(.3);transition:opacity 220ms,transform 520ms cubic-bezier(0.34,1.56,0.64,1)}
+@keyframes ic-beat{0%,100%{transform:translateY(-3px) scale(1)}15%{transform:translateY(-3px) scale(1.22)}30%{transform:translateY(-3px) scale(1)}}
+.ab-line:hover .ic-bulb .glass,.ab-line:focus-within .ic-bulb .glass{animation:ic-flick 700ms steps(1) forwards}
+.ab-line:hover .ic-bulb .fil,.ab-line:focus-within .ic-bulb .fil{stroke:#c2410c}
+.ab-line:hover .ic-bulb .glow,.ab-line:focus-within .ic-bulb .glow{opacity:1;transform:scale(1);transition-delay:320ms}
+.ab-line:hover .ic-bulb .rays line,.ab-line:focus-within .ic-bulb .rays line{opacity:1;transform:scale(1);transition-delay:calc(380ms + var(--i) * 50ms)}
+.ab-line:hover .ic-ai .main,.ab-line:focus-within .ic-ai .main{transform:rotate(90deg) scale(1.06);fill:#ffd9ad}
+.ab-line:hover .ic-ai .s1,.ab-line:focus-within .ic-ai .s1{opacity:1;transform:scale(1);animation:ic-twinkle 1.2s ease-in-out .3s infinite alternate}
+.ab-line:hover .ic-ai .s2,.ab-line:focus-within .ic-ai .s2{opacity:1;transform:scale(1);animation:ic-twinkle 1.2s ease-in-out .6s infinite alternate}
+.ab-line:hover .ic-ai .s3,.ab-line:focus-within .ic-ai .s3{opacity:1;transform:scale(1);animation:ic-twinkle 1.2s ease-in-out .9s infinite alternate}
+.ab-line:hover .ic-walk .leg-f,.ab-line:focus-within .ic-walk .leg-f{animation:ic-swingA .9s ease-in-out infinite alternate}
+.ab-line:hover .ic-walk .leg-b,.ab-line:focus-within .ic-walk .leg-b{animation:ic-swingB .9s ease-in-out infinite alternate}
+.ab-line:hover .ic-walk .arm-f,.ab-line:focus-within .ic-walk .arm-f{animation:ic-swingB .9s ease-in-out infinite alternate}
+.ab-line:hover .ic-walk .arm-b,.ab-line:focus-within .ic-walk .arm-b{animation:ic-swingA .9s ease-in-out infinite alternate}
+.ab-line:hover .ic-walk .bob,.ab-line:focus-within .ic-walk .bob{animation:ic-bob .45s ease-in-out infinite alternate}
+.ab-line:hover .ic-walk .ground,.ab-line:focus-within .ic-walk .ground{animation:ic-ground .9s linear infinite}
+.ab-line:hover .ic-family .adult,.ab-line:focus-within .ic-family .adult{transform:rotate(7deg)}
+.ab-line:hover .ic-family .kid,.ab-line:focus-within .ic-family .kid{transform:rotate(-9deg)}
+.ab-line:hover .ic-family .arm,.ab-line:focus-within .ic-family .arm{stroke-dashoffset:0;transition-delay:180ms}
+.ab-line:hover .ic-family .heart,.ab-line:focus-within .ic-family .heart{opacity:1;transform:translateY(-3px) scale(1);transition-delay:340ms;animation:ic-beat 1.2s ease-in-out .9s infinite}
+@media (hover:none){
+.ab-line .ic-bulb .glass{animation:ic-flick 700ms steps(1) forwards}
+.ab-line .ic-bulb .fil{stroke:#c2410c}
+.ab-line .ic-bulb .glow{opacity:1;transform:scale(1);transition-delay:320ms}
+.ab-line .ic-bulb .rays line{opacity:1;transform:scale(1);transition-delay:calc(380ms + var(--i) * 50ms)}
+.ab-line .ic-ai .main{transform:rotate(90deg) scale(1.06);fill:#ffd9ad}
+.ab-line .ic-ai .s1{opacity:1;transform:scale(1);animation:ic-twinkle 1.2s ease-in-out .3s infinite alternate}
+.ab-line .ic-ai .s2{opacity:1;transform:scale(1);animation:ic-twinkle 1.2s ease-in-out .6s infinite alternate}
+.ab-line .ic-ai .s3{opacity:1;transform:scale(1);animation:ic-twinkle 1.2s ease-in-out .9s infinite alternate}
+.ab-line .ic-walk .leg-f{animation:ic-swingA .9s ease-in-out infinite alternate}
+.ab-line .ic-walk .leg-b{animation:ic-swingB .9s ease-in-out infinite alternate}
+.ab-line .ic-walk .arm-f{animation:ic-swingB .9s ease-in-out infinite alternate}
+.ab-line .ic-walk .arm-b{animation:ic-swingA .9s ease-in-out infinite alternate}
+.ab-line .ic-walk .bob{animation:ic-bob .45s ease-in-out infinite alternate}
+.ab-line .ic-walk .ground{animation:ic-ground .9s linear infinite}
+.ab-line .ic-family .adult{transform:rotate(7deg)}
+.ab-line .ic-family .kid{transform:rotate(-9deg)}
+.ab-line .ic-family .arm{stroke-dashoffset:0;transition-delay:180ms}
+.ab-line .ic-family .heart{opacity:1;transform:translateY(-3px) scale(1);transition-delay:340ms;animation:ic-beat 1.2s ease-in-out .9s infinite}
+}
+@media (prefers-reduced-motion:reduce){.ic *{animation:none!important;transition:none!important}}
+
+@media (prefers-reduced-motion:reduce){.spv-live{animation:none}.spv-card:hover .spv-wave,.ab-line:hover .spv-wave{animation:none}.ab-word,.ab-dot{transition:none}.spv-app:hover .spv-app__icon{transform:none}}
+</style>
+</head>
+<body>
+<div class="spv" style="font-family:Inter,system-ui,sans-serif;color:#111110;background:#f6f5f2">
+
+<header class="spv-nav">
+<nav class="spv-container" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;min-height:72px" aria-label="Main">
+<a class="spv-logo" href="#top"><svg width="36" height="36" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" style="fill:var(--ink, #111110)"/><path transform="translate(22.00 86.00) scale(0.04710 -0.04710)" style="fill:var(--paper, #f6f5f2)" d="M562 -26C858 -26 1058 120 1058 337C1058 494 956 585 739 625L527 664C454 678 413 707 413 751C413 803 465 842 555 842C646 842 712 787 714 713H1031C1025 938 838 1078 543 1078C249 1078 70 944 70 735C70 568 181 461 389 424L580 390C664 375 708 347 708 301C708 248 652 211 557 211C456 211 395 260 385 338H46C65 113 270 -26 562 -26Z"/><g class="spv-logo__hop"><circle class="spv-logo__dot" cx="85.83" cy="78.00" r="8" style="fill:#fb923c"/></g></svg><span>Santiago Pirez Velasco</span></a>
+<div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+<a class="spv-nav__link" href="#work">Work</a>
+<a class="spv-nav__link" href="#building">Building</a>
+<a class="spv-nav__link" href="#approach">Approach</a>
+<a class="spv-nav__link" href="#about">About</a>
+<button class="spv-btn spv-btn--primary spv-btn--sm" type="button" data-open-contact><svg class="spv-wave" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5h10a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 13 11.5H7l-3 2.5v-2.5H3A1.5 1.5 0 0 1 1.5 10V4A1.5 1.5 0 0 1 3 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Say hi</button>
+</div>
+</nav>
+</header>
+
+<section id="top" class="spv-container" style="padding-top:clamp(64px,9vw,128px);padding-bottom:72px">
+<p class="spv-label spv-rise" style="--i:0;margin:0 0 28px">Senior Director, Product &amp; Design · WEX</p>
+<h1 class="spv-rise" style="--i:1;font-family:'Inter Tight',Inter,sans-serif;font-weight:600;font-size:clamp(44px,6.4vw,88px);line-height:1.08;letter-spacing:-.035em;margin:0;max-width:1050px">I lead product and design teams — and I <span class="spv-mark" style="--delay:900ms">still ship my own apps.</span></h1>
+<p class="spv-rise" style="--i:2;font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:#3f3d39;max-width:680px;margin:32px 0 0">10+ years across fintech, payments and mobility. Today I set North American product and design strategy at WEX for products used by 500K+ customers every month.</p>
+<div class="spv-rise" style="--i:3;display:flex;gap:12px;flex-wrap:wrap;margin-top:40px">
+<a class="spv-btn spv-btn--primary" href="#work">See the case studies <span class="spv-arrow" aria-hidden="true">→</span></a>
+<a class="spv-btn spv-btn--secondary" href="/resume/santiago-pirez-velasco.pdf">Resume (PDF) <span class="spv-arrow spv-arrow--down" aria-hidden="true">↓</span></a>
+<a class="spv-btn spv-btn--secondary" href="https://www.linkedin.com/in/santiago-pirez-22980b7a/">LinkedIn</a>
+</div>
+
+<div class="spv-rise" style="--i:4;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:88px;border-top:1px solid #d9d6cf">
+<div style="padding:28px 24px 0 0"><div class="spv-stat__value"><span class="spv-count" style="--to:500;--delay:500ms" aria-hidden="true"></span>K+<span class="spv-sr">500K+</span></div><div class="spv-stat__label">monthly customers in scope</div></div>
+<div style="padding:28px 24px 0 0"><div class="spv-stat__value"><span class="spv-count" style="--to:15;--delay:580ms" aria-hidden="true"></span>+<span class="spv-sr">15+</span></div><div class="spv-stat__label">people across product, design &amp; research</div></div>
+<div style="padding:28px 24px 0 0"><div class="spv-stat__value"><span class="spv-count" style="--to:10;--delay:660ms" aria-hidden="true"></span>+<span class="spv-sr">10+</span></div><div class="spv-stat__label">years across fintech, payments &amp; mobility</div></div>
+<div style="padding:28px 24px 0 0"><div class="spv-stat__value"><span class="spv-count" style="--to:6;--delay:740ms" aria-hidden="true"></span>+<span class="spv-sr">6+</span></div><div class="spv-stat__label">apps shipped on the side</div></div>
+</div>
+</section>
+
+<section id="work" style="padding:96px 0;border-top:1px solid #e5e2dc">
+<div class="spv-container">
+<div class="spv-section-head spv-reveal">
+<div><p class="spv-label" style="margin:0 0 16px">Selected work at WEX</p><h2 class="spv-h2">Leadership case studies</h2></div>
+<p style="color:#5e5b55;max-width:440px;margin:0;font-size:16px;line-height:1.55">Billing, spending controls, sign-in and mobile: the everyday moments that keep fleet businesses running.</p>
+</div>
+
+<a href="/work/billing/" class="spv-card spv-reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:40px">
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:8px">
+<div>
+<p class="spv-label" style="margin:0 0 20px">01 · Billing, statements &amp; payments</p>
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(26px,2.6vw,34px);line-height:1.12;letter-spacing:-.02em;margin:0">Making business billing easier to understand and manage</h3>
+<p style="color:#3f3d39;font-size:16px;line-height:1.6;margin:20px 0 0">A more connected billing experience that brings statements, transactions, fees and payments together, helping business customers understand their account and take action.</p>
+</div>
+<span class="spv-card__cta">Read case study <span class="spv-arrow" aria-hidden="true">→</span></span>
+</div>
+<div class="spv-media" style="min-height:400px;padding:0;background:#eceae5"><img src="/images/wex/billing.webp" alt="WEX Billing &amp; Payments credit overview with balance, statement summary and transactions" style="object-position:top left"></div>
+</a>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:24px">
+<a href="/work/purchase-controls/" class="spv-card spv-reveal">
+<div class="spv-media" style="min-height:220px;padding:0;background:#eceae5"><img src="/images/wex/purchase-controls.webp" alt="WEX Purchase controls list" style="object-position:top left"></div>
+<p class="spv-label" style="margin:0">02 · Purchase controls</p>
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:23px;line-height:1.2;letter-spacing:-.015em;margin:0">Helping businesses set spending controls with confidence</h3>
+<p style="color:#3f3d39;font-size:15px;line-height:1.6;margin:0;flex-grow:1">A simpler purchase-control experience that helps fleet managers set card limits and alerts while keeping employees moving.</p>
+<span class="spv-card__cta">Read case study <span class="spv-arrow" aria-hidden="true">→</span></span>
+</a>
+<a href="/work/login/" class="spv-card spv-reveal">
+<div class="spv-media" style="min-height:220px;padding:0;background:#eceae5"><img src="/images/wex/login.webp" alt="WEX account menu" style="object-position:top right"></div>
+<p class="spv-label" style="margin:0">03 · Login experience</p>
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:23px;line-height:1.2;letter-spacing:-.015em;margin:0">Making a complex login transition clearer for customers</h3>
+<p style="color:#3f3d39;font-size:15px;line-height:1.6;margin:0;flex-grow:1">An end-to-end login experience that brings customer needs, communications, product decisions and technical teams together.</p>
+<span class="spv-card__cta">Read case study <span class="spv-arrow" aria-hidden="true">→</span></span>
+</a>
+<a href="/work/fillup/" class="spv-card spv-reveal">
+<div class="spv-media" style="min-height:220px;padding:0;background:#eceae5"><img src="/images/wex/fillup-hero.webp" alt="FillUp by WEX app on a phone beside a delivery van" style="object-position:center"></div>
+<p class="spv-label" style="margin:0">04 · FillUp by WEX</p>
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:23px;line-height:1.2;letter-spacing:-.015em;margin:0">One app to keep drivers and businesses moving</h3>
+<p style="color:#3f3d39;font-size:15px;line-height:1.6;margin:0;flex-grow:1">A mobile app for both drivers and managers: support on the road, and the actions that keep a business moving.</p>
+<span class="spv-card__cta">Read case study <span class="spv-arrow" aria-hidden="true">→</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<section id="building" data-theme="dark" style="padding:96px 0;background:#111110;color:#f6f5f2">
+<div class="spv-container">
+<div class="spv-section-head spv-reveal">
+<div><p class="spv-label" style="margin:0 0 16px">Tiger Mind Labs · co-founded with Kyle Beard</p><h2 class="spv-h2">I still build. Here’s what’s live.</h2></div>
+<p style="color:#bdb9b1;max-width:440px;margin:0;font-size:16px;line-height:1.55">Side products I design and build end to end with Codex and React. They keep my product judgment honest: I see every tradeoff from both sides.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+<a href="/apps/milo/" class="spv-app spv-reveal" style="gap:16px">
+<img class="spv-app__icon" src="/images/icons/milo.png" alt="Milo app icon">
+<div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;margin-top:8px">Milo <span class="spv-arrow" aria-hidden="true">→</span></div>
+<p style="margin:0;color:#d6d2ca;font-size:15px;line-height:1.5;flex-grow:1">Shared calendars, trips and expense splitting for small groups.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="spv-tag">iOS</span><span class="spv-tag">Android</span></div>
+</a>
+<a href="/apps/cards-of-chaos/" class="spv-app spv-reveal" style="gap:16px">
+<img class="spv-app__icon" src="/images/icons/cards-of-chaos.png" alt="Cards of Chaos app icon">
+<div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;margin-top:8px">Cards of Chaos <span class="spv-arrow" aria-hidden="true">→</span></div>
+<p style="margin:0;color:#d6d2ca;font-size:15px;line-height:1.5;flex-grow:1">A card-draw golf game that throws wild twists into a round.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="spv-tag">iOS</span><span class="spv-tag">2026</span></div>
+</a>
+<a href="/apps/pacechase/" class="spv-app spv-reveal" style="gap:16px">
+<img class="spv-app__icon" src="/images/icons/pacechase.png" alt="PaceChase app icon">
+<div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;margin-top:8px">PaceChase <span class="spv-arrow" aria-hidden="true">→</span></div>
+<p style="margin:0;color:#d6d2ca;font-size:15px;line-height:1.5;flex-grow:1">Pace and split planning for running, cycling, swimming and HYROX.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="spv-tag">iOS</span><span class="spv-tag">Co-built</span></div>
+</a>
+<a href="/apps/beagle-bounce/" class="spv-app spv-reveal" style="gap:16px">
+<img class="spv-app__icon" src="/images/icons/beagle-bounce.png" alt="Beagle Bounce app icon">
+<div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;margin-top:8px">Beagle Bounce <span class="spv-arrow" aria-hidden="true">→</span></div>
+<p style="margin:0;color:#d6d2ca;font-size:15px;line-height:1.5;flex-grow:1">An endless runner starring Sammy, inspired by the Maine coast.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="spv-tag">Mobile game</span><span class="spv-tag">2026</span></div>
+</a>
+<a href="/apps/hackers-golf/" class="spv-app spv-reveal" style="gap:16px">
+<img class="spv-app__icon" src="/images/icons/hackers-golf.png" alt="Hackers Golf app icon">
+<div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;margin-top:8px">Hackers Golf <span class="spv-arrow" aria-hidden="true">→</span></div>
+<p style="margin:0;color:#d6d2ca;font-size:15px;line-height:1.5;flex-grow:1">Game packs, scoring and leaderboards that make a round social.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="spv-tag">Shipped</span><span class="spv-tag">Co-built</span></div>
+</a>
+<a href="https://tigermindlabs.com/cityscout/" class="spv-app spv-reveal" style="gap:16px">
+<span class="spv-app__icon" style="border-radius:15px;background:linear-gradient(160deg,#fb923c,#c2410c);display:flex;align-items:center;justify-content:center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+<div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px;margin-top:8px">CityScout <span class="spv-arrow" aria-hidden="true">↗</span></div>
+<p style="margin:0;color:#d6d2ca;font-size:15px;line-height:1.5;flex-grow:1">A curated way to explore a city by category, neighborhood and intent.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="spv-tag">Web</span><span class="spv-tag">2023</span></div>
+</a>
+</div>
+
+</div>
+</section>
+
+<section id="approach" class="spv-container" style="padding-top:112px;padding-bottom:96px">
+<div class="spv-reveal">
+<p class="spv-label" style="margin:0 0 16px">How I lead</p>
+<h2 class="spv-h2" style="max-width:760px">Fewer parts, clearer decisions, teams that own the outcome.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:56px">
+<div class="spv-reveal" style="border-top:2px solid #111110;padding-top:24px">
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:21px;margin:0 0 12px">Invest where traffic and pain overlap</h3>
+<p style="color:#3f3d39;font-size:16px;line-height:1.6;margin:0">I tie design investment to service volume, retention and revenue, so the team works on what moves the business, not what’s loudest.</p>
+</div>
+<div class="spv-reveal" style="border-top:2px solid #111110;padding-top:24px">
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:21px;margin:0 0 12px">Make it real early</h3>
+<p style="color:#3f3d39;font-size:16px;line-height:1.6;margin:0">Prototypes, not decks, settle roadmap debates. A working flow in front of executives and customers ends arguments faster than any slide.</p>
+</div>
+<div class="spv-reveal" style="border-top:2px solid #111110;padding-top:24px">
+<h3 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:21px;margin:0 0 12px">Grow leaders, not dependencies</h3>
+<p style="color:#3f3d39;font-size:16px;line-height:1.6;margin:0">I build product and design leaders, create operating models, and help multidisciplinary teams move with ownership and real decision speed.</p>
+</div>
+</div>
+</section>
+
+<section id="about" style="padding:112px 0 96px;border-top:1px solid #e5e2dc">
+<div class="spv-container">
+<div class="spv-reveal" style="margin-bottom:56px">
+<p class="spv-label" style="margin:0 0 16px">About me</p>
+<h2 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(36px,4.4vw,56px);line-height:1.08;letter-spacing:-.025em;margin:0">Hola, I’m Santiago. Four things I’m about:</h2>
+<p style="color:#3f3d39;font-size:clamp(18px,1.7vw,22px);line-height:1.6;margin:24px 0 0">When I’m not leading product and design at WEX, you’ll find me with my family, out on a walk, or building something new with AI. I’m happiest when I’m learning something I didn’t know yesterday.</p>
+</div>
+<ol style="list-style:none;margin:0;padding:0;border-bottom:1px solid #d9d6cf"><li class="ab-line spv-reveal" tabindex="0" aria-label="Family first. The best part of any day, and the reason the rest matters." style="display:grid;grid-template-columns:72px minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center;padding:28px 0;border-top:1px solid #d9d6cf;outline-offset:6px">
+<span style="display:flex"><svg class="ic ic-family" viewBox="0 0 64 64" aria-hidden="true">
+<path class="heart" d="M33 13 C 25 8, 27 1, 33 5 C 39 1, 41 8, 33 13 Z" fill="#c2410c"/>
+<g class="adult"><path d="M11 60 V43 a11 11 0 0 1 22 0 V60" fill="#c2410c" stroke="#111110" stroke-width="2.5" stroke-linejoin="round"/><circle cx="22" cy="21" r="6.5" fill="#fff4e0" stroke="#111110" stroke-width="2.5"/></g>
+<g class="kid"><path d="M37 60 V48 a8 8 0 0 1 16 0 V60" fill="#fff4e0" stroke="#111110" stroke-width="2.5" stroke-linejoin="round"/><circle cx="45" cy="31" r="5.5" fill="#fff4e0" stroke="#111110" stroke-width="2.5"/></g>
+<path class="arm arm-a" d="M30 39 C 38 37, 44 41, 49 47" fill="none" stroke="#111110" stroke-width="2.5" stroke-linecap="round"/>
+<path class="arm arm-k" d="M40 47 C 36 45, 32 45, 27 48" fill="none" stroke="#111110" stroke-width="2.5" stroke-linecap="round"/>
+</svg></span>
+<span class="ab-word" style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.03em">Family first<span class="ab-dot">.</span></span>
+<span style="color:#5e5b55;font-size:17px;line-height:1.55">The best part of any day, and the reason the rest matters.</span>
+</li><li class="ab-line spv-reveal" tabindex="0" aria-label="Long walks. Where the noise clears and the next idea shows up." style="display:grid;grid-template-columns:72px minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center;padding:28px 0;border-top:1px solid #d9d6cf;outline-offset:6px">
+<span style="display:flex"><svg class="ic ic-walk" viewBox="0 0 64 64" aria-hidden="true">
+<line class="ground" x1="4" y1="60" x2="60" y2="60" stroke="#8f8b83" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<g class="bob" stroke="#111110" stroke-width="3" stroke-linecap="round" fill="none">
+<line class="leg leg-b" x1="30" y1="37" x2="30" y2="57"/>
+<line class="arm arm-b" x1="31" y1="21" x2="31" y2="35"/>
+<line x1="31" y1="20" x2="30" y2="37"/>
+<line class="leg leg-f" x1="30" y1="37" x2="30" y2="57"/>
+<line class="arm arm-f" x1="31" y1="21" x2="31" y2="35"/>
+<circle cx="32" cy="12" r="5.5" fill="#fff4e0" stroke-width="2.5"/>
+</g>
+</svg></span>
+<span class="ab-word" style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.03em">Long walks<span class="ab-dot">.</span></span>
+<span style="color:#5e5b55;font-size:17px;line-height:1.55">Where the noise clears and the next idea shows up.</span>
+</li><li class="ab-line spv-reveal" tabindex="0" aria-label="Building with AI. My latest apps went from first prototype to the App Store with AI as a teammate." style="display:grid;grid-template-columns:72px minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center;padding:28px 0;border-top:1px solid #d9d6cf;outline-offset:6px">
+<span style="display:flex"><svg class="ic ic-ai" viewBox="0 0 64 64" aria-hidden="true">
+<path class="main" d="M28 14 L32.5 29.5 L48 34 L32.5 38.5 L28 54 L23.5 38.5 L8 34 L23.5 29.5 Z" fill="#fff4e0" stroke="#111110" stroke-width="2.5" stroke-linejoin="round"/>
+<path class="s1" d="M50 5 L52.2 11.8 L59 14 L52.2 16.2 L50 23 L47.8 16.2 L41 14 L47.8 11.8 Z" fill="#c2410c"/>
+<path class="s2" d="M52 44 L53.5 48.5 L58 50 L53.5 51.5 L52 56 L50.5 51.5 L46 50 L50.5 48.5 Z" fill="#c2410c"/>
+<circle class="s3" cx="12" cy="12" r="2.5" fill="#c2410c"/>
+</svg></span>
+<span class="ab-word" style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.03em">Building with AI<span class="ab-dot">.</span></span>
+<span style="color:#5e5b55;font-size:17px;line-height:1.55">My latest apps went from first prototype to the App Store with AI as a teammate.</span>
+</li><li class="ab-line spv-reveal" tabindex="0" aria-label="Always learning. Curious by default. There’s always a next thing to figure out." style="display:grid;grid-template-columns:72px minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center;padding:28px 0;border-top:1px solid #d9d6cf;outline-offset:6px">
+<span style="display:flex"><svg class="ic ic-bulb" viewBox="0 0 64 64" aria-hidden="true">
+<circle class="glow" cx="32" cy="27" r="22" fill="#fff4e0"/>
+<g class="rays" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round">
+<line style="--i:0" x1="32" y1="2" x2="32" y2="6"/><line style="--i:1" x1="13" y1="9" x2="16" y2="12"/><line style="--i:2" x1="51" y1="9" x2="48" y2="12"/><line style="--i:3" x1="5" y1="27" x2="9" y2="27"/><line style="--i:4" x1="59" y1="27" x2="55" y2="27"/>
+</g>
+<path class="glass" d="M32 11a16 16 0 0 0-9.6 28.8c1.6 1.2 2.6 3 2.6 5V47h14v-2.2c0-2 1-3.8 2.6-5A16 16 0 0 0 32 11z" fill="#ffffff" stroke="#111110" stroke-width="2.5" stroke-linejoin="round"/>
+<path class="fil" d="M27 34l2.5-4.5 2.5 4.5 2.5-4.5 2.5 4.5" fill="none" stroke="#8f8b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 52h12M28.5 57.5h7" stroke="#111110" stroke-width="2.5" stroke-linecap="round"/>
+</svg></span>
+<span class="ab-word" style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.03em">Always learning<span class="ab-dot">.</span></span>
+<span style="color:#5e5b55;font-size:17px;line-height:1.55">Curious by default. There’s always a next thing to figure out.</span>
+</li></ol>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:64px;margin-top:96px">
+<div class="spv-reveal">
+<p class="spv-label" style="margin:0 0 24px">The path</p>
+<ol class="tl"><li class="tl-item tl-now"><span class="tl-dot" aria-hidden="true"></span><div class="tl-date">2026 – Present<span class="tl-badge">Now</span></div><div style="font-weight:600;font-size:17px;margin-top:6px">Senior Director, E2E Product Experiences &amp; Design</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">WEX · North America</div></li><li class="tl-item"><span class="tl-dot" aria-hidden="true"></span><div class="tl-date">2025 – 2026</div><div style="font-weight:600;font-size:17px;margin-top:6px">Product Design Director</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">WEX · 15+ across product, design &amp; research</div></li><li class="tl-item tl-now"><span class="tl-dot" aria-hidden="true"></span><div class="tl-date">2022 – Present<span class="tl-badge">Now</span></div><div style="font-weight:600;font-size:17px;margin-top:6px">Co-founder</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">Tiger Mind Labs, with Kyle Beard</div></li><li class="tl-item"><span class="tl-dot" aria-hidden="true"></span><div class="tl-date">2018 – 2025</div><div style="font-weight:600;font-size:17px;margin-top:6px">UX Designer → Senior UX Designer</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">WEX · fleet, payments, design system</div></li><li class="tl-item"><span class="tl-dot" aria-hidden="true"></span><div class="tl-date">2013 – 2018</div><div style="font-weight:600;font-size:17px;margin-top:6px">UI/UX Designer, Brand Manager</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">KarmaPulse · Deezer Mexico · 100 Montaditos</div></li></ol>
+</div>
+<div class="spv-reveal">
+<p class="spv-label" style="margin:0 0 20px">Training</p>
+<ol class="spv-timeline" style="margin-left:12px">
+<li class="spv-timeline__row"><span class="spv-label" style="padding-top:3px">Master’s</span><div><div style="font-weight:600">Web Design &amp; Engineering</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">Universidad Internacional de La Rioja (UNIR)</div></div></li>
+<li class="spv-timeline__row"><span class="spv-label" style="padding-top:3px">B.A.</span><div><div style="font-weight:600">Interactive Design</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">Universidad Iberoamericana</div></div></li>
+<li class="spv-timeline__row"><span class="spv-label" style="padding-top:3px">Diploma</span><div><div style="font-weight:600">Professional Diploma in UX Design</div><div style="color:#5e5b55;font-size:15px;margin-top:4px">UX Design Institute</div></div></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding:120px 0;background:#eceae5">
+<div class="spv-container spv-reveal">
+<p class="spv-label" style="margin:0 0 20px">Contact</p>
+<h2 style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(36px,5vw,64px);line-height:1.05;letter-spacing:-.03em;margin:0;max-width:900px">Hiring a product &amp; design leader, or have an idea worth building?</h2>
+<p style="color:#3f3d39;font-size:18px;line-height:1.6;max-width:560px;margin:24px 0 0">Leave a quick note and it lands straight in my inbox. I reply to every message, usually within two days.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:36px">
+<button class="spv-btn spv-btn--primary" type="button" data-open-contact><svg class="spv-wave" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5h10a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 13 11.5H7l-3 2.5v-2.5H3A1.5 1.5 0 0 1 1.5 10V4A1.5 1.5 0 0 1 3 2.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Say hi <span class="spv-arrow" aria-hidden="true">→</span></button>
+<a class="spv-btn spv-btn--secondary" href="https://www.linkedin.com/in/santiago-pirez-22980b7a/">LinkedIn <span class="spv-arrow" aria-hidden="true">→</span></a>
+<a class="spv-btn spv-btn--secondary" href="/resume/santiago-pirez-velasco.pdf">Resume (PDF) <span class="spv-arrow spv-arrow--down" aria-hidden="true">↓</span></a>
+</div>
+</div>
+</section>
+
+<footer class="spv-container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:32px;padding-bottom:40px;color:#5e5b55;font-size:14px">
+<span style="display:inline-flex;align-items:center;gap:10px"><svg width="24" height="24" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" style="fill:var(--ink, #111110)"/><path transform="translate(22.00 86.00) scale(0.04710 -0.04710)" style="fill:var(--paper, #f6f5f2)" d="M562 -26C858 -26 1058 120 1058 337C1058 494 956 585 739 625L527 664C454 678 413 707 413 751C413 803 465 842 555 842C646 842 712 787 714 713H1031C1025 938 838 1078 543 1078C249 1078 70 944 70 735C70 568 181 461 389 424L580 390C664 375 708 347 708 301C708 248 652 211 557 211C456 211 395 260 385 338H46C65 113 270 -26 562 -26Z"/><g class="spv-logo__hop"><circle class="spv-logo__dot" cx="85.83" cy="78.00" r="8" style="fill:#fb923c"/></g></svg>© 2026 Santiago Pirez Velasco</span>
+<span>Designed and built by me.</span>
+</footer>
+<div class="spv-backdrop" id="contact-modal" hidden data-close-contact>
+<div class="spv-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" style="max-width:540px;padding:36px">
+<button class="spv-modal__close" type="button" aria-label="Close" data-close-contact><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div data-view="form">
+<div style="display:flex;align-items:center;gap:12px;margin:0 48px 6px 0">
+<span style="width:44px;height:44px;border-radius:12px;background:#fff4e0;color:#c2410c;display:flex;align-items:center;justify-content:center;flex:none"><svg class="spv-wave spv-wave--auto" width="22" height="22" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5h10a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 13 11.5H7l-3 2.5v-2.5H3A1.5 1.5 0 0 1 1.5 10V4A1.5 1.5 0 0 1 3 2.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+<h2 id="contact-title" data-greeting style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:30px;line-height:1.1;letter-spacing:-.02em;margin:0">Say hi</h2>
+</div>
+<p data-subline style="color:#5e5b55;font-size:15px;line-height:1.55;margin:0 0 24px">I read every message myself.</p>
+<form data-contact-form style="display:flex;flex-direction:column;gap:16px">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+<label class="spv-field"><span class="spv-field__label">Name</span><input class="spv-input" name="name" type="text" autocomplete="name" required placeholder="Your name"></label>
+<label class="spv-field"><span class="spv-field__label">Email</span><input class="spv-input" name="email" type="email" autocomplete="email" required placeholder="you@email.com"></label>
+<label class="spv-field"><span class="spv-field__label">Note</span><textarea class="spv-input" name="note" required placeholder="What’s on your mind?" style="min-height:110px"></textarea></label>
+<p data-form-error role="alert" hidden style="color:#b42318;font-size:14px;margin:0">Something went wrong. Please try again in a moment.</p>
+<button class="spv-btn spv-btn--primary" type="submit" data-send style="align-self:flex-start;margin-top:4px"><span data-send-label>Send note</span> <span class="spv-plane" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 3L3 10.5l7 3 3 7z"/><path d="M10 13.5L21 3"/></svg></span></button>
+</form>
+</div>
+<div data-view="sent" hidden>
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:8px 0">
+<div class="spv-burst" aria-hidden="true">
+<span style="--dx:52px;--dy:0px;--d:0ms"></span><span style="--dx:59px;--dy:29px;--d:40ms"></span><span style="--dx:50px;--dy:63px;--d:80ms"></span><span style="--dx:12px;--dy:51px;--d:120ms"></span><span style="--dx:-15px;--dy:64px;--d:0ms"></span><span style="--dx:-50px;--dy:63px;--d:40ms"></span><span style="--dx:-47px;--dy:23px;--d:80ms"></span><span style="--dx:-66px;--dy:0px;--d:120ms"></span><span style="--dx:-72px;--dy:-35px;--d:0ms"></span><span style="--dx:-32px;--dy:-41px;--d:40ms"></span><span style="--dx:-15px;--dy:-64px;--d:80ms"></span><span style="--dx:18px;--dy:-78px;--d:120ms"></span><span style="--dx:32px;--dy:-41px;--d:0ms"></span><span style="--dx:59px;--dy:-29px;--d:40ms"></span>
+<span class="spv-logo" style="position:relative;z-index:1"><svg width="64" height="64" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" style="fill:var(--ink, #111110)"/><path transform="translate(22.00 86.00) scale(0.04710 -0.04710)" style="fill:var(--paper, #f6f5f2)" d="M562 -26C858 -26 1058 120 1058 337C1058 494 956 585 739 625L527 664C454 678 413 707 413 751C413 803 465 842 555 842C646 842 712 787 714 713H1031C1025 938 838 1078 543 1078C249 1078 70 944 70 735C70 568 181 461 389 424L580 390C664 375 708 347 708 301C708 248 652 211 557 211C456 211 395 260 385 338H46C65 113 270 -26 562 -26Z"/><g class="spv-logo__hop"><circle class="spv-logo__dot" cx="85.83" cy="78.00" r="8" style="fill:#fb923c"/></g></svg></span>
+</div>
+<h2 data-thanks style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:32px;line-height:1.1;letter-spacing:-.02em;margin:0">Thanks!</h2>
+<p style="color:#3f3d39;font-size:16px;line-height:1.6;margin:0;max-width:380px">Your note is on its way to my inbox. I’ll reply within two days.</p>
+<button class="spv-btn spv-btn--secondary" type="button" data-close-contact style="margin-top:8px">Back to the site</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script src="/assets/site.js" defer></script>
+</body>
 </html>

@@ -1,6 +1,6 @@
 # GitHub Pages And GoDaddy Domain Setup
 
-This portfolio is a static React app deployed with GitHub Pages from the `docs` folder.
+This portfolio is a static site (plain HTML, CSS and JS) deployed with GitHub Pages from the `docs` folder.
 
 ## GitHub Setup
 
@@ -11,8 +11,7 @@ This portfolio is a static React app deployed with GitHub Pages from the `docs` 
 5. Set the custom domain to `santiagopirezvelasco.com`.
 6. Enable HTTPS after GitHub finishes checking DNS.
 
-The source code lives in `src`. The production site files live in `docs`.
-After changes, run `npm run build` and copy the new `dist` output into `docs` before committing.
+There is no build step: `docs` is both the source and the published site. Edit files in `docs`, commit, and push.
 
 ## GoDaddy DNS
 
