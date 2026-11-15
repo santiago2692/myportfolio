@@ -28,6 +28,11 @@ cd docs && python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
+## After editing CSS or JS
+
+Run `python3 scripts/stamp_assets.py` before committing. It adds a version to the `spv.css` and `site.js`
+links on every page, so visitors' browsers load the new files instead of an old cached copy.
+
 ## Contact form
 
 The "Say hi" form posts to [FormSubmit](https://formsubmit.co) (no account needed). The first submission sends an
