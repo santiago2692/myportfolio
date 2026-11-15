@@ -109,6 +109,25 @@
     });
   }
 
+
+  /* ---------- Mobile menu ---------- */
+  var nav = document.querySelector('[data-nav]');
+  var toggle = document.querySelector('[data-nav-toggle]');
+  if (nav && toggle) {
+    var setMenu = function (open) {
+      nav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+    toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+    nav.querySelectorAll('#nav-menu a, #nav-menu button').forEach(function (el) {
+      el.addEventListener('click', function () { setMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); } });
+    document.addEventListener('click', function (e) { if (nav.classList.contains('is-open') && !nav.contains(e.target)) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 760) setMenu(false); });
+  }
+
   /* ---------- Nav: highlight the section in view ---------- */
   var links = document.querySelectorAll('.spv-nav__link[href^="#"]');
   if (links.length && 'IntersectionObserver' in window) {
