@@ -197,3 +197,21 @@ textarea.spv-input { min-height: 132px; resize: vertical; }
 .spv-logo:hover .spv-logo__hop { animation: spv-dot-hop 560ms var(--ease-out); }
 @keyframes spv-dot-drop { 0% { transform: translateY(-70px); opacity: 0; } 50% { opacity: 1; } 100% { transform: none; } }
 @keyframes spv-dot-hop { 0%, 100% { transform: none; } 40% { transform: translateY(-16px); } 72% { transform: translateY(1px) scale(1.18, .82); } }
+
+/* ---------- Success state (contact) ---------- */
+.spv-success { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 12px 0 4px; }
+.spv-success__badge { position: relative; width: 72px; height: 72px; margin-bottom: 8px; }
+.spv-success__badge svg { position: relative; z-index: 1; width: 72px; height: 72px; display: block; overflow: visible; }
+.spv-success__disc { fill: var(--accent); transform-box: fill-box; transform-origin: center; animation: spv-success-pop 560ms var(--ease-spring) both; }
+.spv-success__check { fill: none; stroke: var(--on-accent); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: spv-success-draw 380ms var(--ease-out) 300ms forwards; }
+.spv-success__ring { position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--accent); opacity: 0; animation: spv-success-ring 900ms var(--ease-out) 360ms both; }
+.spv-success__item { opacity: 0; transform: translateY(8px); animation: spv-success-in var(--dur-reveal) var(--ease-out) both; animation-delay: calc(420ms + var(--i, 0) * 80ms); }
+@keyframes spv-success-pop { from { transform: scale(.3); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes spv-success-draw { to { stroke-dashoffset: 0; } }
+@keyframes spv-success-ring { 0% { transform: scale(.9); opacity: .55; } 100% { transform: scale(1.75); opacity: 0; } }
+@keyframes spv-success-in { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .spv-success__disc, .spv-success__item { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .spv-success__check { animation: none !important; stroke-dashoffset: 0 !important; }
+  .spv-success__ring { display: none; }
+}
